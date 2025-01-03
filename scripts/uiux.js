@@ -140,7 +140,6 @@ function showPopup() {
     }, 30); // delay to allow transition
 }
 
-
 function hidePopup() {
     popupCont.classList.remove("opacity-100", "scale-100");
     popupCont.classList.add("opacity-0", "scale-90");
