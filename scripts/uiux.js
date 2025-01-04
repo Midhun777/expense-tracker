@@ -111,7 +111,6 @@ addLendBtn.addEventListener("click", function () {
     popupNotelabel.innerHTML = "Note";
 });
 
-
 closePopup.addEventListener("click", function () {
     popupCont.classList.add("hidden");
     popupCont.classList.remove("flex");
