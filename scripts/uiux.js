@@ -33,7 +33,7 @@ expNav.addEventListener("click", function () {
     addLendBtn.classList.add("hidden");
     addLendBtn.classList.remove("flex");
 
-    // // Show the Expense container; hide Owe and Lend containers
+    // Show the Expense container; hide Owe and Lend containers
     expCont.classList.remove("hidden");
     expCont.classList.add("flex");
     oweCont.classList.add("hidden");
