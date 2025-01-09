@@ -52,7 +52,7 @@ oweNav.addEventListener("click", function () {
     addLendBtn.classList.add("hidden");
     addLendBtn.classList.remove("flex");
 
-    // // Show Owe container; hide Expense and Lend containers
+    // Show Owe container; hide Expense and Lend containers
     expCont.classList.add("hidden");
     expCont.classList.remove("flex");
     oweCont.classList.remove("hidden");
