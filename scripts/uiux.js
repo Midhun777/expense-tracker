@@ -3,6 +3,7 @@ const expNav = document.getElementById("expNav");
 const oweNav = document.getElementById("oweNav");
 const lendNav = document.getElementById("lendNav");
 const secTitle = document.getElementById("secTitle");
+
 //
 const expCont = document.getElementById("exp-cont");
 const oweCont = document.getElementById("owe-cont");
