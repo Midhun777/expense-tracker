@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <div class="add-exp-form mt-4">
+                <form action method="post">
+                    <div class="flex justify-between items-center">
+                        <label for="exp-name"
+                            class="text-lg font-semibold">Expense Name</label>
+                        <input type="text" name="exp-name" id="exp-name"
+                            class="exp-name w-3/5 h-10 border-solid border-2 border-gray-500 rounded-md shadow-md p-2">
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <label for="exp-amount"
+                            class="text-lg font-semibold">Amount</label>
+                        <input type="number" name="exp-amount" id="exp-amount"
+                            class="exp-amount w-3/5 h-10 border-solid border-2 border-gray-500 rounded-md shadow-md p-2">
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <label for="exp-date"
+                            class="text-lg font-semibold">Date</label>
+                        <input type="date" name="exp-date" id="exp-date"
+                            class="exp-date w-3/5 h-10 border-solid border-2 border-gray-500 rounded-md shadow-md p-2">
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <label for="exp-cat"
+                            class="text-lg font-semibold">Category</label>
+                        <select name="exp-cat" id="exp-cat"
+                            class="exp-cat w-3/5 h-10 border-solid border-2 border-gray-500 rounded-md shadow-md p-2">
+                            <option value="food">Food</option>
+                            <option value="grocery">Grocery</option>
+                            <option value="rent">Rent</option>
+                            <option value="others">Others</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <label for="exp-desc"
+                            class="text-lg font-semibold">Description</label>
+                        <textarea name="exp-desc" id="exp-desc"
+                            class="exp-desc w-3/5 h-20 border-solid border-2 border-gray-500 rounded-md shadow-md p-2"></textarea>
+                    </div>
+                    <div class="flex justify-center items-center mt-4">
+                        <button
+                            class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-secGreen flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-[rgb(42,40,40)] shadow-md ml">Add
+                            Expense
+                            <i
+                                class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                        </button>
+                    </div>
+
+                </body>
+            </html>

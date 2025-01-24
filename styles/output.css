@@ -625,8 +625,16 @@ video {
   margin-right: 1.25rem;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-10 {
@@ -643,6 +651,14 @@ video {
 
 .h-24 {
   height: 6rem;
+}
+
+.h-12 {
+  height: 3rem;
+}
+
+.h-20 {
+  height: 5rem;
 }
 
 .w-4\/5 {
@@ -685,12 +701,32 @@ video {
   width: 10rem;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
+.w-\[\] {
+  width: ;
+}
+
+.w-3\/5 {
+  width: 60%;
+}
+
 .items-center {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
 }
 
 .justify-evenly {
@@ -718,6 +754,11 @@ video {
   border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
 }
 
+.border-gray-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity, 1));
+}
+
 .bg-priRed {
   --tw-bg-opacity: 1;
   background-color: rgb(223 57 82 / var(--tw-bg-opacity, 1));
@@ -731,6 +772,18 @@ video {
 .bg-secGreenDark {
   --tw-bg-opacity: 1;
   background-color: rgb(137 217 115 / var(--tw-bg-opacity, 1));
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-3 {
+  padding: 0.75rem;
 }
 
 .text-2xl {
@@ -751,6 +804,11 @@ video {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-medium {
@@ -789,6 +847,12 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.shadow-sm {
+  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 @media (min-width: 640px) {
   .sm\:w-40 {
     width: 10rem;
@@ -802,6 +866,10 @@ video {
 }
 
 @media (min-width: 1024px) {
+  .lg\:h-14 {
+    height: 3.5rem;
+  }
+
   .lg\:w-40 {
     width: 10rem;
   }
@@ -812,5 +880,10 @@ video {
 
   .lg\:w-52 {
     width: 13rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
