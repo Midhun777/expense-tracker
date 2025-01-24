@@ -597,28 +597,16 @@ video {
   margin-left: 1rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-9 {
-  margin-top: 2.25rem;
-}
-
 .mt-3 {
   margin-top: 0.75rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .flex {
@@ -637,20 +625,8 @@ video {
   height: 6rem;
 }
 
-.h-7 {
-  height: 1.75rem;
-}
-
 .h-\[50px\] {
   height: 50px;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .w-32 {
@@ -661,40 +637,16 @@ video {
   width: 80%;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-4 {
-  width: 1rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
-.w-1\/2 {
-  width: 50%;
-}
-
-.w-72 {
-  width: 18rem;
-}
-
 .w-\[200px\] {
   width: 200px;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .items-center {
   align-items: center;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .justify-around {
@@ -717,10 +669,6 @@ video {
   border-width: 2px;
 }
 
-.border {
-  border-width: 1px;
-}
-
 .border-solid {
   border-style: solid;
 }
@@ -728,11 +676,6 @@ video {
 .border-red-500 {
   --tw-border-opacity: 1;
   border-color: rgb(239 68 68 / var(--tw-border-opacity, 1));
-}
-
-.border-red-600 {
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
 }
 
 .bg-priRed {
@@ -745,8 +688,9 @@ video {
   background-color: rgb(159 236 136 / var(--tw-bg-opacity, 1));
 }
 
-.pl-4 {
-  padding-left: 1rem;
+.bg-secGreenDark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(124 196 103 / var(--tw-bg-opacity, 1));
 }
 
 .text-2xl {
@@ -759,22 +703,22 @@ video {
   line-height: 1.75rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .font-medium {
   font-weight: 500;
 }
 
-.text-textCol {
-  --tw-text-opacity: 1;
-  color: rgb(16 3 5 / var(--tw-text-opacity, 1));
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-\[rgb\(42\2c 40\2c 40\)\] {
   --tw-text-opacity: 1;
   color: rgb(42 40 40 / var(--tw-text-opacity, 1));
+}
+
+.text-textCol {
+  --tw-text-opacity: 1;
+  color: rgb(16 3 5 / var(--tw-text-opacity, 1));
 }
 
 .shadow-md {
