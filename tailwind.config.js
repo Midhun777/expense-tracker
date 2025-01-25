@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       colors: {
         textCol: '#100305',
+        textColLight: '#2a2828',
         bgCol: '#fef7f8',
         priRed: '#df3952',
         secGreen: '#9fec88',

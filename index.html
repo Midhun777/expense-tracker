@@ -5,6 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Expense Tracker
         </title>
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32"
+            href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16"
+            href="assets/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
@@ -21,14 +28,20 @@
         <div class="container mx-auto">
             <nav class="nav w-full h-16 flex justify-between items-center">
                 <span class="logo text-2xl font-semibold ml-5">xpenso</span>
-                <a href="https://github.com/Midhun777" target="_blank"> <i
-                        class="fa-brands fa-github text-3xl mr-5"></i></a>
+                <div class="github">
+                    <a href="https://github.com/Midhun777/expense-tracker"><i class="fa-solid fa-code text-2xl mr-5"></i></a>
+                     <a href="https://github.com/Midhun777"
+                        target="_blank">
+                        <i class="fa-brands fa-github text-3xl mr-5"></i></a>
+                        
+                    </div>
+
             </nav>
-            <section>
+            <section class="main">
                 <div class="cont">
 
                     <div
-                        class="cate-nav h-24 w-4/5 mx-auto text-textCol bg-priRed border-solid border-2 border-red-500 shadow-md rounded-lg mt-2 flex justify-evenly items-center">
+                        class="cate-nav h-20 lg:h-24 w-4/5 mx-auto text-textCol bg-priRed border-solid border-2 border-red-500 shadow-md rounded-lg mt-2 flex justify-evenly items-center">
                         <a href="#"><button
                                 class="cat-items w-[5em] lg:w-40 h-10 font-semibold bg-secGreenDark rounded-md shadow-md">Expense</button></a>
                         <a href="#"><button
@@ -40,17 +53,130 @@
                     <div class="cont-sub w-4/5 mx-auto mt-4 ">
                         <div class="add-exp">
                             <button
-                                class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-[rgb(42,40,40)] shadow-md ml">Add
+                                class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
                                 Expense
                                 <i
                                     class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                             </button>
-                        </div>
 
+                            <p class="cate-label mt-4 text-lg font-semibold">
+                                Expenses
+                            </p>
+
+                            <div
+                                class="exp-cont flex  flex-wrap justify-between items-center">
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1 cursor-pointer">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                                <div
+                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                    <div class="card-left w-9/12">
+                                        <p
+                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                        <p
+                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                            some groceries :<span
+                                                class="date text-[0.7em]">
+                                                25/01/2025</span></p>
+                                    </div>
+                                    <div
+                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                </div>
+
+                            </div>
+
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-        <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
-    </body>
-</html>
+                </section>
+            </div>
+            <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
+        </body>
+    </html>
