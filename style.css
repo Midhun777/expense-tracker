@@ -10,8 +10,15 @@ html {
     background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);
 }
 
-body {
+.logo {
     font-family: "Playwrite DE Grund", serif;
     font-optical-sizing: auto;
     font-style: normal;
+}
+
+body {
+  /* font-family: "Chivo", serif;
+  font-optical-sizing: auto;
+  font-style: normal; */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }

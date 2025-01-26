@@ -58,13 +58,11 @@
                                 <button
                                     class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
                                     Expense
-                                    <i
-                                        class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                                    <i class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                                 </button>
                                 <!-- ***** -->
 
-                                <p
-                                    class="cate-label mt-4 text-lg font-semibold">
+                                <p class="cate-label mt-4 text-lg font-semibold">
                                     Expenses
                                 </p>
 
@@ -364,55 +362,77 @@
                         </div>
                     </main>
 
-                    <div class="form-cont w-screen shadow-md h-screen flex justify-center items-center fixed inset-0 bg-black bg-opacity-40">
-                        <div class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
-                            <div class="form-head flex justify-between items-center p-2 rounded-lg">
-                                <p class="text-lg font-semibold text-textColLight">Add Expense</p>
-                                <i class="fa-solid fa-times text-2xl text-textColLight close"></i>
-                            </div>
-                            <form action="" class="form-body p-4">
-                                <div class="form-group flex flex-col">
-                                    <label for="category" class="text-lg font-semibold text-textColLight">Category</label>
-                                    <input type="text" id="category" name="category" class="form-input mt-2 p-2 rounded-lg" placeholder="Enter Category">
-                                </div>
-                                
-                                <div class="form-group flex flex-col">
-                                    <label for="title" class="text-lg font-semibold text-textColLight">Title</label>
-                                    <input type="text" id="title" name="title" class="form-input mt-2 p-2 rounded-lg" placeholder="Enter Title">
-                                </div>
-                                
-                                <!-- Price and Date Fields -->
-                                <div class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-                                    <!-- Price Field -->
-                                    <div class="sm:w-1/2 mb-4 sm:mb-0">
-                                        <label for="price" class="text-lg font-semibold text-textColLight">Price</label>
-                                        <input type="number" id="price" name="price" class="form-input mt-2 p-2 rounded-lg w-full" placeholder="Enter Price">
-                                    </div>
-                                
-                                    <!-- Date Field -->
-                                    <div class="sm:w-1/2">
-                                        <label for="date" class="text-lg font-semibold text-textColLight">Date</label>
-                                        <input type="date" id="date" name="date" class="form-input mt-2 p-2 rounded-lg w-full">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-group flex flex-col">
-                                    <label for="note" class="text-lg font-semibold text-textColLight">Note</label>
-                                    <textarea id="note" name="note" class="form-input mt-2 p-2 rounded-lg" placeholder="Enter Note"></textarea>
-                                </div>
-                                
-                             <div class="button-div w-full flex justify-end mt-4">
-                                 <button class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
-                                <button type="submit" class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
-                             </div>
-                                
-                                
-                        </div>
-                    </div>
+                    <!-- Popup -->
 
-                </div>
-            </section>
-        </div>
-        <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
-    </body>
-</html>
+                    <div
+                        class="form-cont w-screen shadow-md h-screen flex justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
+                        <div
+                            class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
+                            <div
+                                class="form-head flex justify-between items-center p-2 rounded-lg">
+                                <p
+                                    class="text-lg font-semibold text-textColLight">Add
+                                    Expense</p>
+                                <i
+                                    class="fa-solid fa-times text-2xl text-textColLight close"></i>
+                            </div>
+                            <form class="form-body p-4">
+                                <div class="form-group flex flex-col">
+                                    <label
+                                        class="text-lg font-semibold text-textColLight">Category</label>
+                                    <input type="text" id="category"
+                                        class="form-input mt-2 p-2 rounded-lg"
+                                        placeholder="Enter Category">
+                                </div>
+
+                                <div class="form-group flex flex-col">
+                                    <label
+                                        class="text-lg font-semibold text-textColLight mt-1">Title</label>
+                                    <input type="text" id="title"
+                                        class="form-input mt-2 p-2 rounded-lg"
+                                        placeholder="Enter Title">
+                                </div>
+
+                                <div
+                                    class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+                                    <div class="sm:w-1/2 mb-4 sm:mb-0">
+                                        <label
+                                            class="text-lg font-semibold text-textColLight mt-1">Price</label>
+                                        <input type="number" id="price"
+                                            class="form-input mt-2 p-2 rounded-lg w-full"
+                                            placeholder="Enter Price">
+                                    </div>
+
+                                    <div class="sm:w-1/2">
+                                        <label
+                                            class="text-lg font-semibold text-textColLight">Date</label>
+                                        <input type="date" id="date"
+                                            class="form-input mt-2 p-2 rounded-lg w-full">
+                                    </div>
+                                </div>
+
+                                <div class="form-group flex flex-col">
+                                    <label
+                                        class="text-lg font-semibold text-textColLight mt-1">Note</label>
+                                    <textarea id="note"
+                                        class="form-input mt-2 p-2 rounded-lg"
+                                        placeholder="Enter Note"></textarea>
+                                </div>
+
+                                <div
+                                    class="button-div w-full flex justify-end mt-4">
+                                    <button
+                                        class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
+                                    <button
+                                        class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+            <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
+        </body>
+    </html>
