@@ -17,7 +17,6 @@ A simple and fun project to learn **JavaScript** and **Tailwind CSS** while buil
 - Add, edit, and delete expenses.  
 - Categorize expenses (food, utilities, etc.).  
 - Track total income vs. expenses.  
-- Export expense data to **CSV**.  
 - Mobile-friendly design.  
 
 ---
