@@ -28,8 +28,6 @@
             <nav class="nav w-full h-16 flex justify-between items-center">
                 <span class="logo text-2xl font-semibold ml-5">xpenso</span>
                 <div class="github">
-                    <a href="https://github.com/Midhun777/expense-tracker"><i
-                            class="fa-solid fa-code text-2xl mr-5"></i></a>
                     <a href="https://github.com/Midhun777"
                         target="_blank">
                         <i class="fa-brands fa-github text-3xl mr-5"></i></a>
@@ -56,7 +54,7 @@
                             <!-- Add Expense Button -->
                             <div class="add-exp">
                                 <button id="addExpBtn"
-                                    class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
+                                    class="add-button    text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
                                     Expense
                                     <i
                                         class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
@@ -135,8 +133,8 @@
 
                     <!-- Popup -->
 
-                    <div
-                        class="form-cont w-screen shadow-md h-screen flex justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
+                    <div id="popup"
+                        class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
                         <div
                             class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
                             <div
@@ -144,8 +142,8 @@
                                 <p
                                     class="text-lg font-semibold text-textColLight">Add
                                     Expense</p>
-                                <i
-                                    class="fa-solid fa-times text-2xl text-textColLight close"></i>
+                                <i id="closePopup"
+                                    class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
                             </div>
                             <form class="form-body p-4">
                                 <div class="form-group flex flex-col">
@@ -192,7 +190,7 @@
 
                                 <div
                                     class="button-div w-full flex justify-end mt-4">
-                                    <button
+                                    <button id="cancelPopup"
                                         class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
                                     <button
                                         class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>

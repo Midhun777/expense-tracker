@@ -6,6 +6,9 @@ const addExpBtn = document.getElementById("addExpBtn");
 const expCont = document.getElementById("exp-cont");
 const oweCont = document.getElementById("owe-cont");
 const lendCont = document.getElementById("lend-cont");
+const addPopup = document.getElementById("popup");
+const closePopup = document.getElementById("closePopup");
+const cancelPopup = document.getElementById("cancelPopup");
 
 expNav.addEventListener("click", function () {
     console.log('1')
@@ -35,4 +38,23 @@ lendNav.addEventListener("click", function () {
     expCont.classList.remove("flex");
     oweCont.classList.remove("flex");
     lendCont.classList.remove("hidden");
-})
+});
+
+addExpBtn.addEventListener("click",function(){
+    console.log('4')
+    addPopup.classList.add("flex");
+    addPopup.classList.remove("hidden");
+});
+
+closePopup.addEventListener("click",function(){
+    console.log('5')
+    addPopup.classList.add("hidden");
+    addPopup.classList.remove("flex");
+});
+
+cancelPopup.addEventListener("click",function(){
+    console.log('6')
+    addPopup.classList.add("hidden");
+    addPopup.classList.remove("flex");
+});
+

@@ -991,6 +991,10 @@ video {
     width: 32%;
   }
 
+  .lg\:p-1 {
+    padding: 0.25rem;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
