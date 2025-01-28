@@ -19,7 +19,7 @@
         <link href="./styles/output.css" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
-    <body class="w-screen">
+    <body class="w-screen text-textColLight">
 
         <script src="https://kit.fontawesome.com/0be4e24505.js"
             crossorigin="anonymous"></script>
@@ -41,11 +41,11 @@
                     <!-- category navigation -->
                     <div
                         class="cate-nav h-20 lg:h-24 w-4/5 mx-auto text-textCol bg-priRed border-solid border-2 border-red-500 shadow-md rounded-lg mt-2 flex justify-evenly items-center">
-                        <a href="#"><button
+                        <a href="#"><button id="expNav"
                                 class="cat-items w-[5em] lg:w-40 h-10 font-semibold bg-secGreenDark rounded-md shadow-md">Expense</button></a>
-                        <a href="#"><button
+                        <a href="#"><button id="oweNav"
                                 class="cat-items w-[4em] lg:w-40  h-10 font-semibold bg-secGreen rounded-md shadow-md">Owes</button></a>
-                        <a href="#"><button
+                        <a href="#"><button id="lendNav"
                                 class="cat-items w-[4em] lg:w-40  h-10 font-semibold bg-secGreen rounded-md shadow-md ">Lends</button></a>
                     </div>
                     <!-- **** -->
@@ -55,306 +55,77 @@
 
                             <!-- Add Expense Button -->
                             <div class="add-exp">
-                                <button
+                                <button id="addExpBtn"
                                     class="add-button p-3 text-base lg:text-lg mt-3 p-1 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
                                     Expense
-                                    <i class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                                    <i
+                                        class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                                 </button>
                                 <!-- ***** -->
 
-                                <p class="cate-label mt-4 text-lg font-semibold">
+                                <p
+                                    class="cate-label mt-4 text-lg font-semibold">
                                     Expenses
                                 </p>
 
                                 <!-- Expenses Section -->
+                                <!-- cards -->
 
-                                <div
-                                    class="exp-cont flex  flex-wrap justify-between items-center hidden">
-
-                                    <!-- cards -->
-
-                                    <!-- <div
-                                    class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1 cursor-pointer">
-                                    <div class="card-left w-9/12">
-                                        <p
-                                            class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                        <p
-                                            class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                            some groceries :<span
-                                                class="date text-[0.7em]">
-                                                25/01/2025</span></p>
-                                    </div>
-                                    <div
-                                        class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                </div> -->
+                                <div id="exp-cont"
+                                    class="exp-cont flex flex-wrap justify-between items-center">
 
                                     <div
                                         class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
                                         <div class="card-left w-9/12">
                                             <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
+                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Grocery</p>
                                             <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
+                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Bought
                                                 some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
+                                                    class="date text-[1em] lg:inline md:hidden">
+                                                    Jan 28</span></p>
                                         </div>
                                         <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                                some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                                some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                                some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                                some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Bought
-                                                some groceries :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹59</div>
                                     </div>
 
                                 </div>
 
                                 <!-- Owes Section -->
-                                <div
-                                    class="owe-cont flex  flex-wrap justify-between items-center hidden">
+                                <div id="owe-cont"
+                                    class="owe-cont flex-wrap justify-between items-center hidden">
                                     <div
                                         class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
                                         <div class="card-left w-9/12">
                                             <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
+                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
                                             <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
+                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
+                                                :<span
+                                                    class="date text-[1em] lg:inline md:hidden">
+                                                    Jan 28</span></p>
                                         </div>
                                         <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹599</div>
                                     </div>
                                 </div>
 
                                 <!-- Lends Section -->
-                                <div
-                                    class="owe-cont flex  flex-wrap justify-between items-center hidden">
+                                <div id="lend-cont"
+                                    class="lend-cont flex-wrap justify-between items-center hidden">
                                     <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                        class="lend-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
                                         <div class="card-left w-9/12">
                                             <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
+                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
                                             <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                lend :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
+                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
+                                                :<span
+                                                    class="date text-[1em] lg:inline md:hidden">
+                                                    Jan 28</span></p>
                                         </div>
                                         <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
-                                    </div>
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-lg font-semibold ml-4 text-textColLight mt-1 lg:mt-2">John</p>
-                                            <p
-                                                class="lg:text-sm text-xs ml-4 text-textColLight mt-3 lg:mt-3 font-bold">Test
-                                                owe :<span
-                                                    class="date text-[0.7em]">
-                                                    25/01/2025</span></p>
-                                        </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-xl lg:text-2xl font-bold text-textColLight">₹59</div>
+                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹350</div>
                                     </div>
                                 </div>
 
@@ -433,6 +204,7 @@
                     </div>
                 </section>
             </div>
+            <script src="app.js"></script>
             <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
         </body>
     </html>
