@@ -1,20 +1,30 @@
+//Navigation
 const expNav = document.getElementById("expNav");
 const oweNav = document.getElementById("oweNav");
 const lendNav = document.getElementById("lendNav");
-
+const secTitle = document.getElementById("secTitle");
+//
 const expCont = document.getElementById("exp-cont");
 const oweCont = document.getElementById("owe-cont");
 const lendCont = document.getElementById("lend-cont");
-const expPopup = document.getElementById("expPopup");
+const popupCont = document.getElementById("popupCont");
 const closePopup = document.getElementById("closePopup");
 const cancelPopup = document.getElementById("cancelPopup");
 
+//Add Button
 const addExpBtn = document.getElementById("addExpBtn");
 const addOweBtn = document.getElementById("addOweBtn");
 const addLendBtn = document.getElementById("addLendBtn");
 
+//Popup
+const popupHead = document.getElementById("popupHead");
+const popupCatelabel = document.getElementById("popupCatelabel");
+const popupTitlelabel = document.getElementById("popupTitlelabel");
+const popupPricelabel = document.getElementById("popupPricelabel");
+const popupNotelabel = document.getElementById("popupNotelabel");
 
 expNav.addEventListener("click", function () {
+    secTitle.innerHTML = "Expenses";
     addExpBtn.classList.remove("hidden");
     addExpBtn.classList.add("flex");
     addOweBtn.classList.add("hidden");
@@ -30,6 +40,7 @@ expNav.addEventListener("click", function () {
 });
 
 oweNav.addEventListener("click", function () {
+    secTitle.innerHTML = "Owes";
     addExpBtn.classList.add("hidden");
     addExpBtn.classList.remove("flex");
     addOweBtn.classList.remove("hidden");
@@ -45,6 +56,7 @@ oweNav.addEventListener("click", function () {
 });
 
 lendNav.addEventListener("click", function () {
+    secTitle.innerHTML = "Lends";
     addExpBtn.classList.add("hidden");
     addExpBtn.classList.remove("flex");
     addOweBtn.classList.add("hidden");
@@ -61,17 +73,42 @@ lendNav.addEventListener("click", function () {
 });
 
 addExpBtn.addEventListener("click", function () {
-    expPopup.classList.add("flex");
-    expPopup.classList.remove("hidden");
+    popupCont.classList.add("flex");
+    popupCont.classList.remove("hidden");
 });
 
 closePopup.addEventListener("click", function () {
-    expPopup.classList.add("hidden");
-    expPopup.classList.remove("flex");
+    popupCont.classList.add("hidden");
+    popupCont.classList.remove("flex");
 });
 
 cancelPopup.addEventListener("click", function () {
-    expPopup.classList.add("hidden");
-    expPopup.classList.remove("flex");
+    popupCont.classList.add("hidden");
+    popupCont.classList.remove("flex");
 });
 
+function displayPopup(btn) {
+    popupCont.classList.add("flex");
+    popupCont.classList.remove("hidden");
+    if (btn == "addOweBtn") {
+        popupHead.innerHTML = "Add Owe";
+        popupCatelabel.innerHTML = "Name";
+        popupTitlelabel.innerHTML = "Title";
+        popupPricelabel.innerHTML = "Amount";
+        popupNotelabel.innerHTML = "Note";
+    } else if (btn == "addLendBtn") {
+        popupHead.innerHTML = "Add Lend";
+        popupCatelabel.innerHTML = "Name";
+        popupTitlelabel.innerHTML = "Title";
+        popupPricelabel.innerHTML = "Amount";
+        popupNotelabel.innerHTML = "Note";
+    }
+}
+
+addOweBtn.addEventListener("click", function () {
+    displayPopup('addOweBtn');
+});
+
+addOweBtn.addEventListener("click", function () {
+    displayPopup('addLendBtn');
+});
