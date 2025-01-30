@@ -1,7 +1,6 @@
 const expNav = document.getElementById("expNav");
 const oweNav = document.getElementById("oweNav");
 const lendNav = document.getElementById("lendNav");
-const addExpBtn = document.getElementById("addExpBtn");
 
 const expCont = document.getElementById("exp-cont");
 const oweCont = document.getElementById("owe-cont");
@@ -10,8 +9,18 @@ const expPopup = document.getElementById("expPopup");
 const closePopup = document.getElementById("closePopup");
 const cancelPopup = document.getElementById("cancelPopup");
 
+const addExpBtn = document.getElementById("addExpBtn");
+const addOweBtn = document.getElementById("addOweBtn");
+const addLendBtn = document.getElementById("addLendBtn");
+
+
 expNav.addEventListener("click", function () {
-    console.log('clicked expNan')
+    addExpBtn.classList.remove("hidden");
+    addExpBtn.classList.add("flex");
+    addOweBtn.classList.add("hidden");
+    addOweBtn.classList.remove("flex");
+    addLendBtn.classList.add("hidden");
+    addLendBtn.classList.remove("flex");
     expCont.classList.add("flex");
     oweCont.classList.add("hidden");
     lendCont.classList.add("hidden");
@@ -21,7 +30,12 @@ expNav.addEventListener("click", function () {
 });
 
 oweNav.addEventListener("click", function () {
-    console.log('2')
+    addExpBtn.classList.add("hidden");
+    addExpBtn.classList.remove("flex");
+    addOweBtn.classList.remove("hidden");
+    addOweBtn.classList.add("flex");
+    addLendBtn.classList.add("hidden");
+    addLendBtn.classList.remove("flex");
     expCont.classList.add("hidden");
     oweCont.classList.add("flex");
     lendCont.classList.add("hidden");
@@ -31,8 +45,14 @@ oweNav.addEventListener("click", function () {
 });
 
 lendNav.addEventListener("click", function () {
-    console.log('3')
-    expCont.classList.add("hidden");
+    addExpBtn.classList.add("hidden");
+    addExpBtn.classList.remove("flex");
+    addOweBtn.classList.add("hidden");
+    addOweBtn.classList.remove("flex");
+    addLendBtn.classList.remove("hidden");
+    addLendBtn.classList.add("flex");
+    addLendBtn.classList.add("flex");
+    addLendBtn.classList.remove("hidden");
     oweCont.classList.add("hidden");
     lendCont.classList.add("flex");
     expCont.classList.remove("flex");
@@ -40,20 +60,17 @@ lendNav.addEventListener("click", function () {
     lendCont.classList.remove("hidden");
 });
 
-addExpBtn.addEventListener("click",function(){
-    console.log('4')
+addExpBtn.addEventListener("click", function () {
     expPopup.classList.add("flex");
     expPopup.classList.remove("hidden");
 });
 
-closePopup.addEventListener("click",function(){
-    console.log('5')
+closePopup.addEventListener("click", function () {
     expPopup.classList.add("hidden");
     expPopup.classList.remove("flex");
 });
 
-cancelPopup.addEventListener("click",function(){
-    console.log('6')
+cancelPopup.addEventListener("click", function () {
     expPopup.classList.add("hidden");
     expPopup.classList.remove("flex");
 });

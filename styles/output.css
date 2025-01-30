@@ -609,6 +609,14 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-\[-10px\] {
+  margin-bottom: -10px;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
+}
+
 .ml-4 {
   margin-left: 1rem;
 }
@@ -639,34 +647,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.-mb-\[5px\] {
-  margin-bottom: -5px;
-}
-
-.-mb-\[10px\] {
-  margin-bottom: -10px;
-}
-
-.mb-\[10px\] {
-  margin-bottom: 10px;
-}
-
-.mb-\[-10px\] {
-  margin-bottom: -10px;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .flex {
@@ -823,10 +803,6 @@ video {
   --tw-bg-opacity: 0.4;
 }
 
-.p-1 {
-  padding: 0.25rem;
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -849,8 +825,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-\[0\.7em\] {
-  font-size: 0.7em;
+.text-\[1em\] {
+  font-size: 1em;
 }
 
 .text-base {
@@ -863,27 +839,14 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
 
-.text-\[1em\] {
-  font-size: 1em;
-}
-
-.font-bold {
-  font-weight: 700;
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 
 .font-medium {
@@ -904,10 +867,6 @@ video {
   color: rgb(42 40 40 / var(--tw-text-opacity, 1));
 }
 
-.text-\[em\] {
-  color: em;
-}
-
 .shadow-md {
   --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
@@ -917,10 +876,6 @@ video {
 @media (min-width: 640px) {
   .sm\:mb-0 {
     margin-bottom: 0px;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:w-1\/2 {
@@ -949,14 +904,6 @@ video {
 @media (min-width: 1024px) {
   .lg\:mt-2 {
     margin-top: 0.5rem;
-  }
-
-  .lg\:mt-3 {
-    margin-top: 0.75rem;
-  }
-
-  .lg\:block {
-    display: block;
   }
 
   .lg\:inline {
@@ -995,9 +942,9 @@ video {
     padding: 0.25rem;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-lg {
@@ -1008,10 +955,5 @@ video {
   .lg\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 }

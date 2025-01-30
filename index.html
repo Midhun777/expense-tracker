@@ -3,9 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Expense Tracker - Track Your Spending & Manage Finances Efficiently</title>
-        <meta name="keywords" content="expense tracker, budget tracker, finance management, expense tracker app, money management"> 
-        <meta name="description" content="Track your expenses easily with our expense tracker. Keep tabs on what you're spending and managing your finances.">
+        <title>Expense Tracker - Track Your Spending & Manage Finances
+            Efficiently</title>
+        <meta name="keywords"
+            content="expense tracker, budget tracker, finance management, expense tracker app, money management">
+        <meta name="description"
+            content="Track your expenses easily with our expense tracker. Keep tabs on what you're spending and managing your finances.">
         <link rel="apple-touch-icon" sizes="180x180"
             href="assets/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32"
@@ -56,293 +59,309 @@
                             <!-- Add Expense Button -->
                             <div class="add-exp">
                                 <button id="addExpBtn"
-                                    class="add-button    text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
+                                    class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
                                     Expense
                                     <i
                                         class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                                 </button>
-                                <!-- ***** -->
 
-                                <p
-                                    class="cate-label mt-4 text-lg font-semibold">
-                                    Expenses
-                                </p>
+                                <div class="add-owe">
+                                    <button id="addOweBtn"
+                                        class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
+                                        Owe
+                                        <i
+                                            class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                                    </button>
 
-                                <!-- Expenses Section -->
-                                <!-- cards -->
+                                    <div class="add-lend">
+                                        <button id="addLendBtn"
+                                            class="add-button    text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
+                                            Lend
+                                            <i
+                                                class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                                        </button>
+                                        <!-- ***** -->
 
-                                <div id="exp-cont"
-                                    class="exp-cont flex flex-wrap justify-between items-center">
+                                        <p
+                                            class="cate-label mt-4 text-lg font-semibold">
+                                            Expenses
+                                        </p>
 
-                                    <div
-                                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Grocery</p>
-                                            <p
-                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Bought
-                                                some groceries :<span
-                                                    class="date text-[1em] lg:inline md:hidden">
-                                                    Jan 28</span></p>
+                                        <!-- Expenses Section -->
+                                        <!-- cards -->
+
+                                        <div id="exp-cont"
+                                            class="exp-cont flex flex-wrap justify-between items-center">
+
+                                            <div
+                                                class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                                <div class="card-left w-9/12">
+                                                    <p
+                                                        class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Grocery</p>
+                                                    <p
+                                                        class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Bought
+                                                        some groceries :<span
+                                                            class="date text-[1em] lg:inline md:hidden">
+                                                            Jan 28</span></p>
+                                                </div>
+                                                <div
+                                                    class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹59</div>
+                                            </div>
+
                                         </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹59</div>
-                                    </div>
 
-                                </div>
-
-                                <!-- Owes Section -->
-                                <div id="owe-cont"
-                                    class="owe-cont flex-wrap justify-between items-center hidden">
-                                    <div
-                                        class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
-                                            <p
-                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
-                                                :<span
-                                                    class="date text-[1em] lg:inline md:hidden">
-                                                    Jan 28</span></p>
+                                        <!-- Owes Section -->
+                                        <div id="owe-cont"
+                                            class="owe-cont flex-wrap justify-between items-center hidden">
+                                            <div
+                                                class="owe-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                                <div class="card-left w-9/12">
+                                                    <p
+                                                        class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
+                                                    <p
+                                                        class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
+                                                        :<span
+                                                            class="date text-[1em] lg:inline md:hidden">
+                                                            Jan 28</span></p>
+                                                </div>
+                                                <div
+                                                    class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹599</div>
+                                            </div>
                                         </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹599</div>
-                                    </div>
-                                </div>
 
-                                <!-- Lends Section -->
-                                <div id="lend-cont"
-                                    class="lend-cont flex-wrap justify-between items-center hidden">
-                                    <div
-                                        class="lend-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
-                                        <div class="card-left w-9/12">
-                                            <p
-                                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
-                                            <p
-                                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
-                                                :<span
-                                                    class="date text-[1em] lg:inline md:hidden">
-                                                    Jan 28</span></p>
+                                        <!-- Lends Section -->
+                                        <div id="lend-cont"
+                                            class="lend-cont flex-wrap justify-between items-center hidden">
+                                            <div
+                                                class="lend-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 rounded-lg shadow-md flex mb-1">
+                                                <div class="card-left w-9/12">
+                                                    <p
+                                                        class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Travel</p>
+                                                    <p
+                                                        class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Petrol
+                                                        :<span
+                                                            class="date text-[1em] lg:inline md:hidden">
+                                                            Jan 28</span></p>
+                                                </div>
+                                                <div
+                                                    class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹350</div>
+                                            </div>
                                         </div>
-                                        <div
-                                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹350</div>
+
                                     </div>
                                 </div>
+                            </main>
 
-                            </div>
-                        </div>
-                    </main>
+                            <!-- Popup -->
 
-                    <!-- Popup -->
-
-                    <div id="expPopup"
-                        class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
-                        <div
-                            class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
-                            <div
-                                class="form-head flex justify-between items-center p-2 rounded-lg">
-                                <p
-                                    class="text-lg font-semibold text-textColLight">Add
-                                    Expense</p>
-                                <i id="closePopup"
-                                    class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
-                            </div>
-                            <form class="form-body p-4">
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight">Category</label>
-                                    <input type="text" id="category"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Category">
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Title</label>
-                                    <input type="text" id="title"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Title">
-                                </div>
-
+                            <div id="expPopup"
+                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
                                 <div
-                                    class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-                                    <div class="sm:w-1/2 mb-4 sm:mb-0">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight mt-1">Price</label>
-                                        <input type="number" id="price"
-                                            class="form-input mt-2 p-2 rounded-lg w-full"
-                                            placeholder="Enter Price">
+                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
+                                    <div
+                                        class="form-head flex justify-between items-center p-2 rounded-lg">
+                                        <p
+                                            class="text-lg font-semibold text-textColLight">Add
+                                            Expense</p>
+                                        <i id="closePopup"
+                                            class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
                                     </div>
+                                    <form class="form-body p-4">
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight">Category</label>
+                                            <input type="text" id="category"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Category">
+                                        </div>
 
-                                    <div class="sm:w-1/2">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight">Date</label>
-                                        <input type="date" id="date"
-                                            class="form-input mt-2 p-2 rounded-lg w-full">
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Title</label>
+                                            <input type="text" id="title"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Title">
+                                        </div>
+
+                                        <div
+                                            class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+                                            <div class="sm:w-1/2 mb-4 sm:mb-0">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight mt-1">Price</label>
+                                                <input type="number" id="price"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full"
+                                                    placeholder="Enter Price">
+                                            </div>
+
+                                            <div class="sm:w-1/2">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight">Date</label>
+                                                <input type="date" id="date"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Note</label>
+                                            <textarea id="note"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Note"></textarea>
+                                        </div>
+
+                                        <div
+                                            class="button-div w-full flex justify-end mt-4">
+                                            <button id="cancelPopup"
+                                                class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
+                                            <button
+                                                class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
+                                        </div>
+
                                     </div>
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Note</label>
-                                    <textarea id="note"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Note"></textarea>
-                                </div>
-
-                                <div
-                                    class="button-div w-full flex justify-end mt-4">
-                                    <button id="cancelPopup"
-                                        class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
-                                    <button
-                                        class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
                                 </div>
 
                             </div>
-                        </div>
+
+                            <div id="owePopup"
+                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
+                                <div
+                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
+                                    <div
+                                        class="form-head flex justify-between items-center p-2 rounded-lg">
+                                        <p
+                                            class="text-lg font-semibold text-textColLight">Add
+                                            Expense</p>
+                                        <i id="closePopup"
+                                            class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
+                                    </div>
+                                    <form class="form-body p-4">
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight">Category</label>
+                                            <input type="text" id="category"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Category">
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Title</label>
+                                            <input type="text" id="title"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Title">
+                                        </div>
+
+                                        <div
+                                            class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+                                            <div class="sm:w-1/2 mb-4 sm:mb-0">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight mt-1">Price</label>
+                                                <input type="number" id="price"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full"
+                                                    placeholder="Enter Price">
+                                            </div>
+
+                                            <div class="sm:w-1/2">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight">Date</label>
+                                                <input type="date" id="date"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Note</label>
+                                            <textarea id="note"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Note"></textarea>
+                                        </div>
+
+                                        <div
+                                            class="button-div w-full flex justify-end mt-4">
+                                            <button id="cancelPopup"
+                                                class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
+                                            <button
+                                                class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div id="lendPopup"
+                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
+                                <div
+                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
+                                    <div
+                                        class="form-head flex justify-between items-center p-2 rounded-lg">
+                                        <p
+                                            class="text-lg font-semibold text-textColLight">Add
+                                            Expense</p>
+                                        <i id="closePopup"
+                                            class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
+                                    </div>
+                                    <form class="form-body p-4">
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight">Category</label>
+                                            <input type="text" id="category"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Category">
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Title</label>
+                                            <input type="text" id="title"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Title">
+                                        </div>
+
+                                        <div
+                                            class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+                                            <div class="sm:w-1/2 mb-4 sm:mb-0">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight mt-1">Price</label>
+                                                <input type="number" id="price"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full"
+                                                    placeholder="Enter Price">
+                                            </div>
+
+                                            <div class="sm:w-1/2">
+                                                <label
+                                                    class="text-lg font-semibold text-textColLight">Date</label>
+                                                <input type="date" id="date"
+                                                    class="form-input mt-2 p-2 rounded-lg w-full">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group flex flex-col">
+                                            <label
+                                                class="text-lg font-semibold text-textColLight mt-1">Note</label>
+                                            <textarea id="note"
+                                                class="form-input mt-2 p-2 rounded-lg"
+                                                placeholder="Enter Note"></textarea>
+                                        </div>
+
+                                        <div
+                                            class="button-div w-full flex justify-end mt-4">
+                                            <button id="cancelPopup"
+                                                class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
+                                            <button
+                                                class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
 
                     </div>
-                    
-                    <div id="owePopup"
-                        class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
-                        <div
-                            class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
-                            <div
-                                class="form-head flex justify-between items-center p-2 rounded-lg">
-                                <p
-                                    class="text-lg font-semibold text-textColLight">Add
-                                    Expense</p>
-                                <i id="closePopup"
-                                    class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
-                            </div>
-                            <form class="form-body p-4">
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight">Category</label>
-                                    <input type="text" id="category"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Category">
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Title</label>
-                                    <input type="text" id="title"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Title">
-                                </div>
-
-                                <div
-                                    class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-                                    <div class="sm:w-1/2 mb-4 sm:mb-0">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight mt-1">Price</label>
-                                        <input type="number" id="price"
-                                            class="form-input mt-2 p-2 rounded-lg w-full"
-                                            placeholder="Enter Price">
-                                    </div>
-
-                                    <div class="sm:w-1/2">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight">Date</label>
-                                        <input type="date" id="date"
-                                            class="form-input mt-2 p-2 rounded-lg w-full">
-                                    </div>
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Note</label>
-                                    <textarea id="note"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Note"></textarea>
-                                </div>
-
-                                <div
-                                    class="button-div w-full flex justify-end mt-4">
-                                    <button id="cancelPopup"
-                                        class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
-                                    <button
-                                        class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div id="lendPopup"
-                        class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
-                        <div
-                            class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
-                            <div
-                                class="form-head flex justify-between items-center p-2 rounded-lg">
-                                <p
-                                    class="text-lg font-semibold text-textColLight">Add
-                                    Expense</p>
-                                <i id="closePopup"
-                                    class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
-                            </div>
-                            <form class="form-body p-4">
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight">Category</label>
-                                    <input type="text" id="category"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Category">
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Title</label>
-                                    <input type="text" id="title"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Title">
-                                </div>
-
-                                <div
-                                    class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-                                    <div class="sm:w-1/2 mb-4 sm:mb-0">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight mt-1">Price</label>
-                                        <input type="number" id="price"
-                                            class="form-input mt-2 p-2 rounded-lg w-full"
-                                            placeholder="Enter Price">
-                                    </div>
-
-                                    <div class="sm:w-1/2">
-                                        <label
-                                            class="text-lg font-semibold text-textColLight">Date</label>
-                                        <input type="date" id="date"
-                                            class="form-input mt-2 p-2 rounded-lg w-full">
-                                    </div>
-                                </div>
-
-                                <div class="form-group flex flex-col">
-                                    <label
-                                        class="text-lg font-semibold text-textColLight mt-1">Note</label>
-                                    <textarea id="note"
-                                        class="form-input mt-2 p-2 rounded-lg"
-                                        placeholder="Enter Note"></textarea>
-                                </div>
-
-                                <div
-                                    class="button-div w-full flex justify-end mt-4">
-                                    <button id="cancelPopup"
-                                        class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
-                                    <button
-                                        class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </div>
-
-
-                </section>
-            </div>
-            <script src="app.js"></script>
-            <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
-        </body>
-    </html>
+                    <script src="app.js"></script>
+                    <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
+                </body>
+            </html>
