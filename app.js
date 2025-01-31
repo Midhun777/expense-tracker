@@ -109,6 +109,6 @@ addOweBtn.addEventListener("click", function () {
     displayPopup('addOweBtn');
 });
 
-addOweBtn.addEventListener("click", function () {
+addLendBtn.addEventListener("click", function () {
     displayPopup('addLendBtn');
 });
