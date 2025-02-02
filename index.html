@@ -41,6 +41,7 @@
             </nav>
             <section class="main">
                 <div class="cont">
+                    
                     <!-- category navigation -->
                     <div
                         class="cate-nav h-20 lg:h-24 w-4/5 mx-auto text-textCol bg-priRed border-solid border-2 border-red-500 shadow-md rounded-lg mt-2 flex justify-evenly items-center">
@@ -59,7 +60,7 @@
                             <!-- Add Expense Button -->
                             <div class="add-exp">
                                 <button id="addExpBtn"
-                                    class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml">Add
+                                    class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed flex justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md">Add
                                     Expense
                                     <i
                                         class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
@@ -112,13 +113,13 @@
                             <!-- Popup -->
 
                             <div id="popupCont"
-                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden">
+                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden opacity-0 scale-90 transition-all duration-400 ease-out">
                                 <div
-                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg">
+                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg transform transition-all duration-400 ease-out scale-90 ">
                                     <div
                                         class="form-head flex justify-between items-center p-2 rounded-lg">
                                         <p id="popupHead"
-                                            class="text-lg font-semibold text-textColLight">Add
+                                            class="text-lg ml-2 mt-1 font-semibold text-textColLight">Add
                                             Expense</p>
                                         <i id="closePopup"
                                             class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
@@ -169,9 +170,9 @@
                                         <div
                                             class="button-div w-full flex justify-end mt-4">
                                             <button id="cancelPopup"
-                                                class="close bg-priRed mr-6 w-16 h-8 rounded shadow-md">Cancel</button>
+                                                class="close bg-priRed mr-6 w-16 h-8 font-semibold rounded shadow-md">Cancel</button>
                                             <button
-                                                class="bg-secGreen w-16 h-8 rounded shadow-md">Add</button>
+                                                class="bg-secGreen w-16 h-8 font-semibold rounded shadow-md">Add</button>
                                         </div>
 
                                     </div>

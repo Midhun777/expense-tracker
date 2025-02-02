@@ -75,16 +75,19 @@ lendNav.addEventListener("click", function () {
 addExpBtn.addEventListener("click", function () {
     popupCont.classList.add("flex");
     popupCont.classList.remove("hidden");
+    showPopup();
 });
 
 closePopup.addEventListener("click", function () {
     popupCont.classList.add("hidden");
     popupCont.classList.remove("flex");
+    hidePopup();
 });
 
 cancelPopup.addEventListener("click", function () {
     popupCont.classList.add("hidden");
     popupCont.classList.remove("flex");
+    hidePopup();
 });
 
 function displayPopup(btn) {
@@ -112,3 +115,24 @@ addOweBtn.addEventListener("click", function () {
 addOweBtn.addEventListener("click", function () {
     displayPopup('addLendBtn');
 });
+
+// popup animation
+
+// Function to show the popup with animation
+function showPopup() {
+    popupCont.classList.remove("hidden");
+    setTimeout(() => {
+        popupCont.classList.add("opacity-100", "scale-100");
+        popupCont.classList.remove("opacity-0", "scale-90");
+    }, 30); // Short delay to allow transition
+}
+
+// Function to hide the popup with animation
+function hidePopup() {
+    popupCont.classList.remove("opacity-100", "scale-100");
+    popupCont.classList.add("opacity-0", "scale-90");
+
+    setTimeout(() => {
+        popupCont.classList.add("hidden");
+    }, 400); // Wait for transition to complete before hiding
+}
