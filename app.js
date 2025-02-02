@@ -112,9 +112,10 @@ addOweBtn.addEventListener("click", function () {
     displayPopup('addOweBtn');
 });
 
-addOweBtn.addEventListener("click", function () {
+addLendBtn.addEventListener("click", function () {
     displayPopup('addLendBtn');
 });
+<<<<<<< HEAD
 
 // popup animation
 
@@ -136,3 +137,5 @@ function hidePopup() {
         popupCont.classList.add("hidden");
     }, 400); // Wait for transition to complete before hiding
 }
+=======
+>>>>>>> 05f3fc42cad88c6fa3420d27f7638e6ebb98ae9d
