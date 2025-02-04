@@ -124,7 +124,7 @@ cancelPopup.addEventListener("click", function () {
     hidePopup();
 });
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
         popupCont.classList.add("hidden");
         popupCont.classList.remove("flex");
@@ -146,5 +146,5 @@ function hidePopup() {
 
     setTimeout(() => {
         popupCont.classList.add("hidden");
-    }, 400); 
+    }, 400);
 }
