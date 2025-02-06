@@ -115,7 +115,6 @@ addOweBtn.addEventListener("click", function () {
 addLendBtn.addEventListener("click", function () {
     displayPopup('addLendBtn');
 });
-<<<<<<< HEAD
 
 // popup animation
 
