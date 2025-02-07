@@ -25,58 +25,92 @@ const popupNotelabel = document.getElementById("popupNotelabel");
 
 expNav.addEventListener("click", function () {
     secTitle.innerHTML = "Expenses";
+    // Show the Expense button; hide Owe and Lend buttons
     addExpBtn.classList.remove("hidden");
     addExpBtn.classList.add("flex");
     addOweBtn.classList.add("hidden");
     addOweBtn.classList.remove("flex");
     addLendBtn.classList.add("hidden");
     addLendBtn.classList.remove("flex");
+
+    // // Show the Expense container; hide Owe and Lend containers
+    expCont.classList.remove("hidden");
     expCont.classList.add("flex");
     oweCont.classList.add("hidden");
-    lendCont.classList.add("hidden");
-    expCont.classList.remove("hidden");
     oweCont.classList.remove("flex");
+    lendCont.classList.add("hidden");
     lendCont.classList.remove("flex");
 });
 
 oweNav.addEventListener("click", function () {
     secTitle.innerHTML = "Owes";
+    // Show Owe button; hide Expense and Lend buttons
     addExpBtn.classList.add("hidden");
     addExpBtn.classList.remove("flex");
     addOweBtn.classList.remove("hidden");
     addOweBtn.classList.add("flex");
     addLendBtn.classList.add("hidden");
     addLendBtn.classList.remove("flex");
+
+    // // Show Owe container; hide Expense and Lend containers
     expCont.classList.add("hidden");
-    oweCont.classList.add("flex");
-    lendCont.classList.add("hidden");
     expCont.classList.remove("flex");
     oweCont.classList.remove("hidden");
+    oweCont.classList.add("flex");
+    lendCont.classList.add("hidden");
     lendCont.classList.remove("flex");
 });
 
 lendNav.addEventListener("click", function () {
     secTitle.innerHTML = "Lends";
+    // Show Lend button; hide Expense and Owe buttons
     addExpBtn.classList.add("hidden");
     addExpBtn.classList.remove("flex");
     addOweBtn.classList.add("hidden");
     addOweBtn.classList.remove("flex");
     addLendBtn.classList.remove("hidden");
     addLendBtn.classList.add("flex");
-    addLendBtn.classList.add("flex");
-    addLendBtn.classList.remove("hidden");
-    oweCont.classList.add("hidden");
-    lendCont.classList.add("flex");
+
+    // // Show Lend container hide Expense and Owe containers
+    expCont.classList.add("hidden");
     expCont.classList.remove("flex");
+    oweCont.classList.add("hidden");
     oweCont.classList.remove("flex");
     lendCont.classList.remove("hidden");
+    lendCont.classList.add("flex");
 });
+
 
 addExpBtn.addEventListener("click", function () {
     popupCont.classList.add("flex");
     popupCont.classList.remove("hidden");
     showPopup();
 });
+
+addOweBtn.addEventListener("click", function () {
+    popupCont.classList.add("flex");
+    popupCont.classList.remove("hidden");
+    console.log("owe btn clicked");
+    showPopup();
+    popupHead.innerHTML = "Add Owe";
+    popupCatelabel.innerHTML = "Name";
+    popupTitlelabel.innerHTML = "Title";
+    popupPricelabel.innerHTML = "Amount";
+    popupNotelabel.innerHTML = "Note";
+});
+
+addLendBtn.addEventListener("click", function () {
+    popupCont.classList.add("flex");
+    popupCont.classList.remove("hidden");
+    console.log("lend btn clicked");
+    showPopup();
+    popupHead.innerHTML = "Add Lend";
+    popupCatelabel.innerHTML = "Name";
+    popupTitlelabel.innerHTML = "Title";
+    popupPricelabel.innerHTML = "Amount";
+    popupNotelabel.innerHTML = "Note";
+});
+
 
 closePopup.addEventListener("click", function () {
     popupCont.classList.add("hidden");
@@ -90,49 +124,49 @@ cancelPopup.addEventListener("click", function () {
     hidePopup();
 });
 
-function displayPopup(btn) {
-    popupCont.classList.add("flex");
-    popupCont.classList.remove("hidden");
-    if (btn == "addOweBtn") {
-        popupHead.innerHTML = "Add Owe";
-        popupCatelabel.innerHTML = "Name";
-        popupTitlelabel.innerHTML = "Title";
-        popupPricelabel.innerHTML = "Amount";
-        popupNotelabel.innerHTML = "Note";
-    } else if (btn == "addLendBtn") {
-        popupHead.innerHTML = "Add Lend";
-        popupCatelabel.innerHTML = "Name";
-        popupTitlelabel.innerHTML = "Title";
-        popupPricelabel.innerHTML = "Amount";
-        popupNotelabel.innerHTML = "Note";
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        popupCont.classList.add("hidden");
+        popupCont.classList.remove("flex");
+        hidePopup();
     }
-}
-
-addOweBtn.addEventListener("click", function () {
-    displayPopup('addOweBtn');
 });
+// function displayPopup(btnState) {
+//     popupCont.classList.add("flex");
+//     popupCont.classList.remove("hidden");
+//     if (btnState == "addOweBtn") {
+//         popupHead.innerHTML = "Add Owe";
+//         popupCatelabel.innerHTML = "Name";
+//         popupTitlelabel.innerHTML = "Title";
+//         popupPricelabel.innerHTML = "Amount";
+//         popupNotelabel.innerHTML = "Note";
+//     } else if (btnState == "addLendBtn") {
+//         popupHead.innerHTML = "Add Lend";
+//         popupCatelabel.innerHTML = "Name";
+//         popupTitlelabel.innerHTML = "Title";
+//         popupPricelabel.innerHTML = "Amount";
+//         popupNotelabel.innerHTML = "Note";
+//     }
+// }
 
-addLendBtn.addEventListener("click", function () {
-    displayPopup('addLendBtn');
-});
 
 // popup animation
 
-// Function to show the popup with animation
+
 function showPopup() {
     popupCont.classList.remove("hidden");
     setTimeout(() => {
         popupCont.classList.add("opacity-100", "scale-100");
         popupCont.classList.remove("opacity-0", "scale-90");
-    }, 30); // Short delay to allow transition
+    }, 30); // delay to allow transition
 }
 
-// Function to hide the popup with animation
+
 function hidePopup() {
     popupCont.classList.remove("opacity-100", "scale-100");
     popupCont.classList.add("opacity-0", "scale-90");
 
     setTimeout(() => {
         popupCont.classList.add("hidden");
-    }, 400); // Wait for transition to complete before hiding
+    }, 400); 
 }
