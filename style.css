@@ -1,7 +1,7 @@
 html {
     --s: 225px;
     --c1: #e6e6e6;
-    --c2: #f5f5f5;
+    --c2: #f9f8f4;
     --_g: #0000 90deg, var(--c1) 0;
     background:
         conic-gradient(from 90deg at 2px 2px, var(--_g)),

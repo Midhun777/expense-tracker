@@ -7,10 +7,11 @@ module.exports = {
         textCol: '#D0D3D6',
         textColLight: '#2a2828',
         bgCol: '#fef7f8',
-        priRed: '#eac43d',
+        priRed: '#f7d970',
         secGreen: '#242E38',
         secGreenDark:'#242E38',
         accGreen: '#50e38f',
+        navBg : '#f9f8f4'
       },
     },
   },
