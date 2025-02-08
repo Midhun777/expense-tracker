@@ -131,27 +131,6 @@ document.addEventListener("keydown", function(event) {
         hidePopup();
     }
 });
-// function displayPopup(btnState) {
-//     popupCont.classList.add("flex");
-//     popupCont.classList.remove("hidden");
-//     if (btnState == "addOweBtn") {
-//         popupHead.innerHTML = "Add Owe";
-//         popupCatelabel.innerHTML = "Name";
-//         popupTitlelabel.innerHTML = "Title";
-//         popupPricelabel.innerHTML = "Amount";
-//         popupNotelabel.innerHTML = "Note";
-//     } else if (btnState == "addLendBtn") {
-//         popupHead.innerHTML = "Add Lend";
-//         popupCatelabel.innerHTML = "Name";
-//         popupTitlelabel.innerHTML = "Title";
-//         popupPricelabel.innerHTML = "Amount";
-//         popupNotelabel.innerHTML = "Note";
-//     }
-// }
-
-
-// popup animation
-
 
 function showPopup() {
     popupCont.classList.remove("hidden");
@@ -160,7 +139,6 @@ function showPopup() {
         popupCont.classList.remove("opacity-0", "scale-90");
     }, 30); // delay to allow transition
 }
-
 
 function hidePopup() {
     popupCont.classList.remove("opacity-100", "scale-100");
