@@ -93,7 +93,20 @@
                                         <!-- Expenses Section -->
                                         <div id="exp-cont"
                                             class="exp-cont flex-wrap justify-between items-center flex ">
-                                            <p>expense test</p>
+                                            <div
+                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+                        <div class="card-left w-9/12">
+                            <p id="expCardTitle"
+                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">Grocery</p>
+                            <p id="expCardDesc"
+                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">Bought
+                                some groceries :<span id="expCardDate"
+                                    class="date text-[1em] lg:inline md:hidden">
+                                    Jan 28</span></p>
+                        </div>
+                        <div
+                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹59</div>
+                    </div>
                                         </div>
 
                                         <!-- Owes Section -->
@@ -118,7 +131,7 @@
                             <div id="popupCont"
                                 class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden opacity-0 scale-90 transition-all duration-400 ease-out">
                                 <div
-                                    class="form lg:w-1/3 bg-gray-100 shadow-md rounded-lg transform transition-all duration-400 ease-out scale-90 ">
+                                    class="form lg:w-1/3 bg-gray-100 shadow-md border-2 border-black rounded-lg transform transition-all duration-400 ease-out scale-90 ">
                                     <div
                                         class="form-head flex justify-between items-center p-2 rounded-lg">
                                         <p id="popupHead"
@@ -174,8 +187,12 @@
                                             class="button-div w-full flex justify-end mt-4">
                                             <button id="cancelPopup"
                                                 class="close bg-priRed mr-6 w-16 h-8 font-semibold rounded shadow-md border-2 border-black">Cancel</button>
-                                            <button
-                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md">Add</button>
+                                            <button id="submitExp"
+                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md block">Add</button>
+                                            <button id="submitOwe"
+                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
+                                            <button id="submitLend"
+                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
                                         </div>
 
                                     </div>
@@ -186,9 +203,9 @@
                         </section>
 
                     </div>
+                    <script src="scripts/db.js"></script>
                     <script src="scripts/uiux.js"></script>
                     <script src="scripts/app.js"></script>
-                    <script src="scripts/db.js"></script>
 
                     <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
                 </body>

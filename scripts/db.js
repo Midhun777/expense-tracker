@@ -1,7 +1,7 @@
 const db = {
-    expenses: [],
-    owes: [],
-    lends: []
+    expenseArr: [],
+    owesArr: [],
+    lendsArr: []
 };
 
 // db.expenses.push({ title: "Food", amount: 100 });

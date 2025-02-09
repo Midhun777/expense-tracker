@@ -16,6 +16,11 @@ const addExpBtn = document.getElementById("addExpBtn");
 const addOweBtn = document.getElementById("addOweBtn");
 const addLendBtn = document.getElementById("addLendBtn");
 
+//Submit 
+const submitExp = document.getElementById("submitExp");
+const submitOwe = document.getElementById("submitOwe");
+const submitLend = document.getElementById("submitLend");
+
 //Popup
 const popupHead = document.getElementById("popupHead");
 const popupCatelabel = document.getElementById("popupCatelabel");
@@ -24,6 +29,7 @@ const popupPricelabel = document.getElementById("popupPricelabel");
 const popupNotelabel = document.getElementById("popupNotelabel");
 
 expNav.addEventListener("click", function () {
+    // console.log("Expense clicked");
     secTitle.innerHTML = "Expenses";
     // Show the Expense button; hide Owe and Lend buttons
     addExpBtn.classList.remove("hidden");
@@ -40,9 +46,15 @@ expNav.addEventListener("click", function () {
     oweCont.classList.remove("flex");
     lendCont.classList.add("hidden");
     lendCont.classList.remove("flex");
+
+    submitExp.classList.remove("hidden");
+    submitOwe.classList.add("hidden");
+    submitLend.classList.add("hidden");
 });
 
 oweNav.addEventListener("click", function () {
+    // console.log("Owe clicked");
+
     secTitle.innerHTML = "Owes";
     // Show Owe button; hide Expense and Lend buttons
     addExpBtn.classList.add("hidden");
@@ -59,10 +71,15 @@ oweNav.addEventListener("click", function () {
     oweCont.classList.add("flex");
     lendCont.classList.add("hidden");
     lendCont.classList.remove("flex");
+
+    submitExp.classList.add("hidden");
+    submitOwe.classList.remove("hidden");
+    submitLend.classList.add("hidden");
 });
 
 lendNav.addEventListener("click", function () {
     secTitle.innerHTML = "Lends";
+    // console.log("lend clicked");
     // Show Lend button; hide Expense and Owe buttons
     addExpBtn.classList.add("hidden");
     addExpBtn.classList.remove("flex");
@@ -78,6 +95,10 @@ lendNav.addEventListener("click", function () {
     oweCont.classList.remove("flex");
     lendCont.classList.remove("hidden");
     lendCont.classList.add("flex");
+
+    submitExp.classList.add("hidden");
+    submitOwe.classList.add("hidden");
+    submitLend.classList.remove("hidden");
 });
 
 
