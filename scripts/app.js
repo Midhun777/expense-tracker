@@ -1,6 +1,25 @@
-// const expCont = document.getElementById("exp-cont");
-// const oweCont = document.getElementById("exp-cont");
-// const lendCont = document.getElementById("exp-cont");
+function loadExpenses() {
+    let expArr = db.expenseArr;
+    expArr.forEach(exp=>{
+        expCont.innerHTML +=`
+<div
+                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+                        <div class="card-left w-9/12">
+                            <p id="expCardTitle"
+                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${exp.name}</p>
+                            <p id="expCardDesc"
+                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${exp.description} <span> : </span><span id="expCardDate"
+                                    class="date text-[1em] lg:inline md:hidden">
+                                    ${exp.date}</span></p>
+                        </div>
+                        <div
+                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${exp.amount}</div>
+                    </div>
+        `
+    });
+}
+
+loadExpenses();
 
 submitExp.addEventListener("click", function () {
     // console.log("Expense submitted");
@@ -40,12 +59,16 @@ expCont.innerHTML +=`<div
     // localStorage.setItem("expenses", JSON.stringify(expArr));
     console.log(db.expenseArr);
     console.log("Expense added");
+    popupCont.classList.add("hidden");
+    popupCont.classList.remove("flex");
+    hidePopup();
+    // clearForm();
+    
+function clearForm(){
     expName.value = "";
     expAmt.value = "";
     expDate.value = "";
     expCat.value = "";
     expDesc.value = "";
-    popupCont.classList.add("hidden");
-    popupCont.classList.remove("flex");
-    hidePopup();
+}
 });
