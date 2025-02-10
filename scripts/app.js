@@ -1,7 +1,17 @@
+var expDataLs;
+
 function loadExpenses() {
-    let expArr = db.expenseArr;
-    expArr.forEach(exp=>{
-        expCont.innerHTML +=`
+
+    localStorage.setItem("expenses", JSON.stringify(db.expenseArr));
+    expDataLs = localStorage.getItem("expenses");
+    console.log("expDataLs");
+    console.log(JSON.parse(expDataLs));
+    var expDataJson = JSON.parse(expDataLs);
+
+
+    // let expArr = db.expenseArr;
+    expDataJson.forEach(exp => {
+        expCont.innerHTML += `
 <div
                         class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
                         <div class="card-left w-9/12">
@@ -19,27 +29,31 @@ function loadExpenses() {
     });
 }
 
-loadExpenses();
+loadExpenses(); 
 
 submitExp.addEventListener("click", function () {
-    // console.log("Expense submitted");
+
     let expName = document.getElementById("title");
     let expAmt = document.getElementById("price");
     let expDate = document.getElementById("date");
     let expCat = document.getElementById("category");
     let expDesc = document.getElementById("note");
 
+    // console.log("Expense submitted");
+    // if (expName.value === "" || expAmt.value === "" || expDate.value === "" || expCat.value === "" || expDesc.value === "") {
+    // alert("Please fill all the fields");
+    // } else {
     console.log(expName.value, expAmt.value, expDate.value, expCat.value, expDesc.value);
 
     let expObj = {
         name: expName.value,
-        amount: expAmt.value,
+        amount: Number(expAmt.value),
         date: expDate.value,
         category: expCat.value,
         description: expDesc.value
     };
 
-expCont.innerHTML +=`<div
+    expCont.innerHTML += `<div
                         class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
                         <div class="card-left w-9/12">
                             <p id="expCardTitle"
@@ -54,21 +68,26 @@ expCont.innerHTML +=`<div
                     </div>`;
 
     console.log(expObj);
-    // let expArr = JSON.parse(localStorage.getItem("expenses"));
     db.expenseArr.push(expObj);
-    // localStorage.setItem("expenses", JSON.stringify(expArr));
-    console.log(db.expenseArr);
+    saveData();
+    // console.log(db.expenseArr);
     console.log("Expense added");
     popupCont.classList.add("hidden");
     popupCont.classList.remove("flex");
     hidePopup();
     // clearForm();
-    
-function clearForm(){
-    expName.value = "";
-    expAmt.value = "";
-    expDate.value = "";
-    expCat.value = "";
-    expDesc.value = "";
-}
+    // }
+
+    function clearForm() {
+        expName.value = "";
+        expAmt.value = "";
+        expDate.value = "";
+        expCat.value = "";
+        expDesc.value = "";
+    }
 });
+
+function saveData() {
+
+}
+
