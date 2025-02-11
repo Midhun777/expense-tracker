@@ -272,3 +272,46 @@ submitLend.addEventListener("click", function () {
         oweDesc.value = "";
     }
 });
+
+
+localStorage.setItem("lends", JSON.stringify([{
+    name: "Biriyani",
+        amount: 100,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+}, {
+    name: "Ghee Rice",
+        amount: 120,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+},
+{
+    name: "Rice",
+        amount: 120,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+} ]  ));
+
+localStorage.setItem("owes", JSON.stringify([{
+    name: "Biriyani",
+        amount: 100,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+}, {
+    name: "Ghee Rice",
+        amount: 120,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+},
+{
+    name: "Rice",
+        amount: 120,
+            date: "2024-10-01",
+                category: "Food",
+                    description: "Bought groceries"
+} ]  ));
