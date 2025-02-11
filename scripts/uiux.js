@@ -168,3 +168,6 @@ function hidePopup() {
         popupCont.classList.add("hidden");
     }, 400);
 }
+
+
+    
