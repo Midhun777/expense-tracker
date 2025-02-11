@@ -28,7 +28,7 @@ function loadExpenses() {
     });
 }
 
-loadExpenses(); 
+loadExpenses();
 
 submitExp.addEventListener("click", function () {
     let expName = document.getElementById("title");
