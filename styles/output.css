@@ -596,6 +596,10 @@ video {
   inset: 0px;
 }
 
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -723,6 +727,10 @@ video {
 
 .w-9\/12 {
   width: 75%;
+}
+
+.border-collapse {
+  border-collapse: collapse;
 }
 
 .scale-90 {

@@ -1,28 +1,49 @@
+let isLSAvailableExp = localStorage.getItem("expenses");
+let isLSAvailableOwe = localStorage.getItem("owes");
+let isLSAvailableLend = localStorage.getItem("lends");
+
 const db = {
     expenseArr: [],
     owesArr: [],
     lendsArr: []
 };
 
-var expDataLs;
-var oweDataLs;
-var lendDataLs;
-
-expDataLs = localStorage.getItem("expenses");
-oweDataLs = localStorage.getItem("owes");
-lendDataLs = localStorage.getItem("lends");
-
-var expDataJson = JSON.parse(expDataLs);
-var oweDataJson = JSON.parse(oweDataLs);
-var lendDataJson = JSON.parse(lendDataLs);
+if (isLSAvailableExp) {
+    console.log("Expense Data found in local storage");
+    loadExpenses();
+}
+if (isLSAvailableOwe) {
+    console.log("Owes Data found in local storage");
+    loadOwes();
+}
+if (isLSAvailableLend) {
+    console.log("Lends Data found in local storage");
+    loadLends();
+}
+if (!isLSAvailableExp) {
+    console.log("No Expense data found in local storage");
+}
+if (!isLSAvailableOwe) {
+    console.log("No Owe data found in local storage");
+}
+if (!isLSAvailableLend) {
+    console.log("No Lend data found in local storage");
+}
 
 function loadExpenses() {
 
+    var expDataLs = localStorage.getItem("expenses");
+    // var oweDataLs = localStorage.getItem("owes");
+    // var lendDataLs = localStorage.getItem("lends");
+
+    var expDataJson = JSON.parse(expDataLs);
+    // var oweDataJson = JSON.parse(oweDataLs);
+    // var lendDataJson = JSON.parse(lendDataLs);
+
     expDataLs = localStorage.getItem("expenses");
-    console.log("expDataLs");
+    console.log("Loaded Expense Data From Local Storage");
     console.log(JSON.parse(expDataLs));
 
-    // let expArr = db.expenseArr;
     expDataJson.forEach(exp => {
         expCont.innerHTML += `
                     <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
@@ -42,9 +63,16 @@ function loadExpenses() {
 }
 
 function loadOwes() {
+    // var expDataLs = localStorage.getItem("expenses");
+    var oweDataLs = localStorage.getItem("owes");
+    // var lendDataLs = localStorage.getItem("lends");
 
-    expDataLs = localStorage.getItem("owes");
-    console.log("expDataLs");
+    // var expDataJson = JSON.parse(expDataLs);
+    var oweDataJson = JSON.parse(oweDataLs);
+    // var lendDataJson = JSON.parse(lendDataLs);
+
+    oweDataLs = localStorage.getItem("owes");
+    console.log("Loaded Owes Data From Local Storage");
     console.log(JSON.parse(oweDataLs));
 
     // let expArr = db.expenseArr;
@@ -67,9 +95,16 @@ function loadOwes() {
 }
 
 function loadLends() {
+    // var expDataLs = localStorage.getItem("expenses");
+    // var oweDataLs = localStorage.getItem("owes");
+    var lendDataLs = localStorage.getItem("lends");
+
+    // var expDataJson = JSON.parse(expDataLs);
+    // var oweDataJson = JSON.parse(oweDataLs);
+    var lendDataJson = JSON.parse(lendDataLs);
 
     lendDataLs = localStorage.getItem("lends");
-    console.log("lendDataLs");
+    console.log("Loaded Lends Data From Local Storage");
     console.log(JSON.parse(lendDataLs));
 
     // let expArr = db.expenseArr;
@@ -90,13 +125,6 @@ function loadLends() {
         `
     });
 }
-
-// if (!Array.isArray(expDataJson)) {
-    loadExpenses();
-    loadLends();
-    loadOwes();
-// }
-
 
 submitExp.addEventListener("click", function () {
     console.log("clicked submit expense")
@@ -138,24 +166,15 @@ submitExp.addEventListener("click", function () {
     db.expenseArr.push(expObj);
     console.log(db.expenseArr);
     localStorage.setItem("expenses", JSON.stringify(db.expenseArr));
-    // console.log(db.expenseArr);
     console.log("Expense added");
+    console.log("Expense added to local storage");
     popupCont.classList.add("hidden");
     popupCont.classList.remove("flex");
     hidePopup();
     // clearForm();
     // }
 
-    function clearForm() {
-        expName.value = "";
-        expAmt.value = "";
-        expDate.value = "";
-        expCat.value = "";
-        expDesc.value = "";
-    }
 });
-
-
 
 submitOwe.addEventListener("click", function () {
     console.log("clicked submit owe")
@@ -204,16 +223,7 @@ submitOwe.addEventListener("click", function () {
     // clearForm();
     // }
 
-    function clearForm() {
-        oweName.value = "";
-        oweAmt.value = "";
-        oweDate.value = "";
-        oweCat.value = "";
-        oweDesc.value = "";
-    }
 });
-
-
 
 submitLend.addEventListener("click", function () {
     console.log("clicked submit lend")
@@ -264,54 +274,20 @@ submitLend.addEventListener("click", function () {
     // clearForm();
     // }
 
-    function clearForm() {
-        oweName.value = "";
-        oweAmt.value = "";
-        oweDate.value = "";
-        oweCat.value = "";
-        oweDesc.value = "";
-    }
 });
 
 
-localStorage.setItem("lends", JSON.stringify([{
-    name: "Biriyani",
-        amount: 100,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-}, {
-    name: "Ghee Rice",
-        amount: 120,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-},
-{
-    name: "Rice",
-        amount: 120,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-} ]  ));
 
-localStorage.setItem("owes", JSON.stringify([{
-    name: "Biriyani",
-        amount: 100,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-}, {
-    name: "Ghee Rice",
-        amount: 120,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-},
-{
-    name: "Rice",
-        amount: 120,
-            date: "2024-10-01",
-                category: "Food",
-                    description: "Bought groceries"
-} ]  ));
+function clearForm() {
+    let expName = document.getElementById("title");
+    let expAmt = document.getElementById("price");
+    let expDate = document.getElementById("date");
+    let expCat = document.getElementById("category");
+    let expDesc = document.getElementById("note");
+
+    expName.value = "";
+    expAmt.value = "";
+    expDate.value = "";
+    expCat.value = "";
+    expDesc.value = "";
+}

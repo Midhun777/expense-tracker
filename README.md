@@ -15,8 +15,8 @@ A simple and fun project to learn **JavaScript** and **Tailwind CSS** while buil
 
 ## 🌟 Features (Planned)  
 - Add, edit, and delete expenses.  
-- Categorize expenses (food, utilities, etc.).  
-- Track total income vs. expenses.  
+<!-- - Categorize expenses (food, utilities, etc.).   -->
+<!-- - Track total income vs. expenses.   -->
 - Mobile-friendly design.  
 
 ---
@@ -24,7 +24,7 @@ A simple and fun project to learn **JavaScript** and **Tailwind CSS** while buil
 ## 📂 Tech Stack  
 - **Frontend**: HTML + Tailwind CSS.  
 - **Logic**: Vanilla JavaScript.  
-- **Data Storage**: LocalStorage (for now).  
+- **Data Storage**: LocalStorage.  
 
 ---
 
