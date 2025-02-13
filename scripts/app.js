@@ -8,123 +8,19 @@ const db = {
     lendsArr: []
 };
 
-if (isLSAvailableExp) {
-    console.log("Expense Data found in local storage");
-    loadExpenses();
-}
-if (isLSAvailableOwe) {
-    console.log("Owes Data found in local storage");
-    loadOwes();
-}
-if (isLSAvailableLend) {
-    console.log("Lends Data found in local storage");
-    loadLends();
-}
-if (!isLSAvailableExp) {
-    console.log("No Expense data found in local storage");
-}
-if (!isLSAvailableOwe) {
-    console.log("No Owe data found in local storage");
-}
-if (!isLSAvailableLend) {
-    console.log("No Lend data found in local storage");
+function checkAndLoadData(type, container) {
+    let data = localStorage.getItem(type);
+    if (data) {
+        console.log(`${type} Data found in local storage`);
+        loadSaveData(type, container);
+    } else {
+        console.log(`No ${type} data found in local storage`);
+    }
 }
 
-function loadExpenses() {
-
-    var expDataLs = localStorage.getItem("expenses");
-    // var oweDataLs = localStorage.getItem("owes");
-    // var lendDataLs = localStorage.getItem("lends");
-
-    var expDataJson = JSON.parse(expDataLs);
-    // var oweDataJson = JSON.parse(oweDataLs);
-    // var lendDataJson = JSON.parse(lendDataLs);
-
-    expDataLs = localStorage.getItem("expenses");
-    console.log("Loaded Expense Data From Local Storage");
-    console.log(JSON.parse(expDataLs));
-
-    expDataJson.forEach(exp => {
-        expCont.innerHTML += `
-                    <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${exp.name}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${exp.description} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${exp.date}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${exp.amount}</div>
-                    </div>
-        `
-    });
-}
-
-function loadOwes() {
-    // var expDataLs = localStorage.getItem("expenses");
-    var oweDataLs = localStorage.getItem("owes");
-    // var lendDataLs = localStorage.getItem("lends");
-
-    // var expDataJson = JSON.parse(expDataLs);
-    var oweDataJson = JSON.parse(oweDataLs);
-    // var lendDataJson = JSON.parse(lendDataLs);
-
-    oweDataLs = localStorage.getItem("owes");
-    console.log("Loaded Owes Data From Local Storage");
-    console.log(JSON.parse(oweDataLs));
-
-    // let expArr = db.expenseArr;
-    oweDataJson.forEach(exp => {
-        oweCont.innerHTML += `
-                    <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${exp.name}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${exp.description} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${exp.date}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${exp.amount}</div>
-                    </div>
-        `
-    });
-}
-
-function loadLends() {
-    // var expDataLs = localStorage.getItem("expenses");
-    // var oweDataLs = localStorage.getItem("owes");
-    var lendDataLs = localStorage.getItem("lends");
-
-    // var expDataJson = JSON.parse(expDataLs);
-    // var oweDataJson = JSON.parse(oweDataLs);
-    var lendDataJson = JSON.parse(lendDataLs);
-
-    lendDataLs = localStorage.getItem("lends");
-    console.log("Loaded Lends Data From Local Storage");
-    console.log(JSON.parse(lendDataLs));
-
-    // let expArr = db.expenseArr;
-    lendDataJson.forEach(exp => {
-        lendCont.innerHTML += `
-                    <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${exp.name}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${exp.description} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${exp.date}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${exp.amount}</div>
-                    </div>
-        `
-    });
-}
+checkAndLoadData("expenses", expCont);
+checkAndLoadData("owes", oweCont);
+checkAndLoadData("lends", lendCont);
 
 submitExp.addEventListener("click", function () {
     console.log("clicked submit expense")
@@ -148,33 +44,15 @@ submitExp.addEventListener("click", function () {
         description: expDesc.value
     };
 
-    expCont.innerHTML += `<div
-                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${expName.value}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${expDesc.value} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${expDate.value}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${expAmt.value}</div>
-                    </div>`;
+    renderCards(expCont, expName, expAmt, expDate, expDesc);
+    saveData("expenses", expObj, db.expenseArr);
 
-    console.log(expObj);
-    db.expenseArr.push(expObj);
-    console.log(db.expenseArr);
-    localStorage.setItem("expenses", JSON.stringify(db.expenseArr));
-    console.log("Expense added");
-    console.log("Expense added to local storage");
-    popupCont.classList.add("hidden");
-    popupCont.classList.remove("flex");
     hidePopup();
     // clearForm();
     // }
 
 });
+
 
 submitOwe.addEventListener("click", function () {
     console.log("clicked submit owe")
@@ -198,27 +76,10 @@ submitOwe.addEventListener("click", function () {
         description: oweDesc.value
     };
 
-    oweCont.innerHTML += `<div
-                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${oweName.value}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${oweDesc.value} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${oweDate.value}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${oweAmt.value}</div>
-                    </div>`;
+    renderCards(oweCont, oweName, oweAmt, oweDate, oweDesc);
+    saveData("owes", oweObj, db.owesArr);
 
-    console.log(oweObj);
-    db.owesArr.push(oweObj);
-    localStorage.setItem("owes", JSON.stringify(db.owesArr));
-    // console.log(db.expenseArr);
     console.log("Owe added");
-    popupCont.classList.add("hidden");
-    popupCont.classList.remove("flex");
     hidePopup();
     // clearForm();
     // }
@@ -248,28 +109,9 @@ submitLend.addEventListener("click", function () {
         description: lendDesc.value
     };
 
-    lendCont.innerHTML += `<div
-                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
-                        <div class="card-left w-9/12">
-                            <p id="expCardTitle"
-                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${lendName.value}</p>
-                            <p id="expCardDesc"
-                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${lendDesc.value} <span> : </span><span id="expCardDate"
-                                    class="date text-[1em] lg:inline md:hidden">
-                                    ${lendDate.value}</span></p>
-                        </div>
-                        <div
-                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${lendAmt.value}</div>
-                    </div>`;
+    renderCards(lendCont, lendName, lendAmt, lendDate, lendDesc);
+    saveData("lends", lendObj, db.lendsArr);
 
-
-    console.log(lendObj);
-    db.lendsArr.push(lendObj);
-    localStorage.setItem("lends", JSON.stringify(db.lendsArr));
-    // console.log(db.expenseArr);
-    console.log("Owe added");
-    popupCont.classList.add("hidden");
-    popupCont.classList.remove("flex");
     hidePopup();
     // clearForm();
     // }
@@ -277,6 +119,75 @@ submitLend.addEventListener("click", function () {
 });
 
 
+function loadSaveData(type, container) {
+
+    var dataLs = localStorage.getItem(type);
+    const dataJson = JSON.parse(dataLs);
+    console.log(`Loaded ${type} Data From Local Storage`);
+    console.log(JSON.parse(dataLs));
+
+    dataJson.forEach(item => {
+        container.innerHTML += `
+        <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+            <div class="card-left w-9/12">
+                <p id="expCardTitle"
+                    class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${item.name}</p>
+                <p id="expCardDesc"
+                    class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${item.description} <span> : </span><span id="expCardDate"
+                        class="date text-[1em] lg:inline md:hidden">
+                        ${item.date}</span></p>
+            </div>
+            <div
+                class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${item.amount}</div>
+        </div>
+`;
+    });
+}
+
+function renderCards(container, expName, expAmt, expDate, expDesc) {
+    container.innerHTML += `<div
+                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+                        <div class="card-left w-9/12">
+                            <p id="expCardTitle"
+                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${expName.value}</p>
+                            <p id="expCardDesc"
+                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${expDesc.value} <span> : </span><span id="expCardDate"
+                                    class="date text-[1em] lg:inline md:hidden">
+                                    ${expDate.value}</span></p>
+                        </div>
+                        <div
+                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${expAmt.value}</div>
+                    </div>`;
+}
+
+function generateHTMLCard() {
+    container.innerHTML += `
+                    <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+                        <div class="card-left w-9/12">
+                            <p id="expCardTitle"
+                                class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${item.name}</p>
+                            <p id="expCardDesc"
+                                class="lg:text-sm text-sm ml-3 text-textColLight mt-2 lg:mt-2 font-medium mb-[-10px]">${item.description} <span> : </span><span id="expCardDate"
+                                    class="date text-[1em] lg:inline md:hidden">
+                                    ${item.date}</span></p>
+                        </div>
+                        <div
+                            class="card-right w-3/12 flex justify-center items-center text-2xl lg:text-3xl font-medium text-textColLight">₹${item.amount}</div>
+                    </div>
+        `;
+}
+
+function saveData(type, obj, arr) {
+    arr.push(obj);
+    console.log(arr);
+    localStorage.setItem(type, JSON.stringify(arr));
+    console.log(`${type} added to local storage`);
+}
+
+function hidePopup() {
+    popupCont.classList.add("hidden");
+    popupCont.classList.remove("flex");
+}
 
 function clearForm() {
     let expName = document.getElementById("title");
