@@ -1,195 +1,195 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Expense Tracker - Track Your Spending & Manage Finances
-            Efficiently</title>
-        <meta name="keywords"
-            content="expense tracker, budget tracker, finance management, expense tracker app, money management">
-        <meta name="description"
-            content="Track your expenses easily with our expense tracker. Keep tabs on what you're spending and managing your finances.">
-        <link rel="apple-touch-icon" sizes="180x180"
-            href="assets/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32"
-            href="assets/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16"
-            href="assets/favicon-16x16.png">
-        <link rel="manifest" href="assets/site.webmanifest">
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Expense Tracker - Track Your Spending & Manage Finances
+                Efficiently</title>
+            <meta name="keywords"
+                content="expense tracker, budget tracker, finance management, expense tracker app, money management">
+            <meta name="description"
+                content="Track your expenses easily with our expense tracker. Keep tabs on what you're spending and managing your finances.">
+            <link rel="apple-touch-icon" sizes="180x180"
+                href="assets/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32"
+                href="assets/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16"
+                href="assets/favicon-16x16.png">
+            <link rel="manifest" href="assets/site.webmanifest">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+NZ&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-            rel="stylesheet">
-        <link href="./styles/output.css" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body class="w-screen text-textColLight">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link
+                href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Playwrite+DE+Grund:wght@100..400&family=Playwrite+NZ&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+                rel="stylesheet">
+            <link href="./styles/output.css" rel="stylesheet">
+            <link rel="stylesheet" href="style.css">
+        </head>
+        <body class="w-screen text-textColLight">
 
-        <script src="https://kit.fontawesome.com/0be4e24505.js"
-            crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/0be4e24505.js"
+                crossorigin="anonymous"></script>
 
-        <div class="container mx-auto">
-            <nav class="nav w-full h-16 flex justify-between items-center">
-                <span class="logo text-2xl font-semibold ml-5">xpenso</span>
-                <div class="github">
-                    <a href="https://github.com/Midhun777"
-                        target="_blank">
-                        <i class="fa-brands fa-github text-3xl mr-5"></i></a>
-                </div>
-
-            </nav>
-            <section class="main">
-                <div class="cont">
-
-                    <!-- category navigation -->
-                    <div
-                        class="cate-nav h-20 lg:h-24 w-4/5 mx-auto text-black bg-navBg border-solid border-2 border-black rounded-lg mt-2 flex justify-evenly items-center">
-                        <button id="expNav"
-                                class="cat-items w-[5em] lg:w-40 h-10 font-semibold bg-[#f7d970] border-2 border-black rounded-md shadow-md">Expense</button>
-                        <button id="oweNav"
-                                class="cat-items w-[4em] lg:w-40  h-10 font-semibold bg-[#f7d970] border-2 border-black rounded-md shadow-md">Owes</button>
-                        <button id="lendNav"
-                                class="cat-items w-[4em] lg:w-40  h-10 font-semibold  bg-[#f7d970] border-2 border-black rounded-md shadow-md ">Lends</button>
+            <div class="container mx-auto">
+                <nav class="nav w-full h-16 flex justify-between items-center">
+                    <span class="logo text-2xl font-semibold ml-5">xpenso</span>
+                    <div class="github">
+                        <a href="https://github.com/Midhun777"
+                            target="_blank">
+                            <i class="fa-brands fa-github text-3xl mr-5"></i></a>
                     </div>
-                    <!-- ***** -->
 
-                    <main>
-                        <div class="cont-sub w-4/5 mx-auto mt-4 ">
+                </nav>
+                <section class="main">
+                    <div class="cont">
 
-                            <!-- Add Expense Button -->
-                            <div class="add-exp">
-                                <button id="addExpBtn"
-                                    class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed  border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md flex">Add
-                                    Expense
-                                    <i
-                                        class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
-                                </button>
+                        <!-- category navigation -->
+                        <div
+                            class="cate-nav h-20 lg:h-24 w-4/5 mx-auto text-black bg-navBg border-solid border-2 border-black rounded-lg mt-2 flex justify-evenly items-center">
+                            <button id="expNav"
+                                    class="cat-items w-[5em] lg:w-40 h-10 font-semibold bg-[#f7d970] border-2 border-black rounded-md shadow-md">Expense</button>
+                            <button id="oweNav"
+                                    class="cat-items w-[4em] lg:w-40  h-10 font-semibold bg-[#f7d970] border-2 border-black rounded-md shadow-md">Owes</button>
+                            <button id="lendNav"
+                                    class="cat-items w-[4em] lg:w-40  h-10 font-semibold  bg-[#f7d970] border-2 border-black rounded-md shadow-md ">Lends</button>
+                        </div>
+                        <!-- ***** -->
 
-                                <div class="add-owe">
-                                    <button id="addOweBtn"
-                                        class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
-                                        Owe
+                        <main>
+                            <div class="cont-sub w-4/5 mx-auto mt-4 ">
+
+                                <!-- Add Expense Button -->
+                                <div class="add-exp">
+                                    <button id="addExpBtn"
+                                        class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed  border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md flex">Add
+                                        Expense
                                         <i
                                             class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                                     </button>
 
-                                    <div class="add-lend">
-                                        <button id="addLendBtn"
-                                            class="add-button    text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
-                                            Lend
+                                    <div class="add-owe">
+                                        <button id="addOweBtn"
+                                            class="add-button text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
+                                            Owe
                                             <i
                                                 class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
                                         </button>
-                                        <!-- ***** -->
 
-                                        <p id="secTitle"
-                                            class="cate-label mt-4 text-lg font-semibold">
-                                            Expenses
-                                        </p>
+                                        <div class="add-lend">
+                                            <button id="addLendBtn"
+                                                class="add-button    text-base lg:text-lg mt-3 lg:p-1 p-3 bg-priRed border-2 border-black justify-center items-center lg:w-52 h-12 lg:h-14 font-medium rounded-lg text-textColLight shadow-md ml hidden">Add
+                                                Lend
+                                                <i
+                                                    class="fa-solid fa-plus plus-icon ml-4 text-3xl"></i>
+                                            </button>
+                                            <!-- ***** -->
 
-                                        <!-- cards -->
+                                            <p id="secTitle"
+                                                class="cate-label mt-4 text-lg font-semibold">
+                                                Expenses
+                                            </p>
 
-                                        <!-- Expenses Section -->
-                                        <div id="exp-cont"
-                                            class="exp-cont flex-wrap md:gap-x-6 items-center flex ">
+                                            <!-- cards -->
+
+                                            <!-- Expenses Section -->
+                                            <div id="exp-cont"
+                                                class="exp-cont flex-wrap md:gap-x-6 items-center flex ">
+                                            </div>
+
+                                            <!-- Owes Section -->
+                                            <div id="owe-cont"
+                                                class="exp-cont flex-wrap md:gap-x-6 items-center hidden">
+                                            </div>
+
+                                            <!-- Lends Section -->
+                                            <div id="lend-cont"
+                                                class="exp-cont flex-wrap md:gap-x-6 items-center hidden ">
+                                            </div>
+
                                         </div>
-
-                                        <!-- Owes Section -->
-                                        <div id="owe-cont"
-                                            class="exp-cont flex-wrap md:gap-x-6 items-center hidden">
-                                        </div>
-
-                                        <!-- Lends Section -->
-                                        <div id="lend-cont"
-                                            class="exp-cont flex-wrap md:gap-x-6 items-center hidden ">
-                                        </div>
-
                                     </div>
-                                </div>
-                            </main>
+                                </main>
 
-                            <!-- Popup -->
+                                <!-- Popup -->
 
-                            <div id="popupCont"
-                                class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden opacity-0 scale-90 transition-all duration-400 ease-out">
-                                <div
-                                    class="form lg:w-1/3 bg-gray-100 shadow-md border-2 border-black rounded-lg transform transition-all duration-400 ease-out scale-90 ">
+                                <div id="popupCont"
+                                    class="form-cont w-screen shadow-md h-screen justify-center items-center fixed inset-0 bg-black bg-opacity-40 hidden opacity-0 scale-90 transition-all duration-400 ease-out">
                                     <div
-                                        class="form-head flex justify-between items-center p-2 rounded-lg">
-                                        <p id="popupHead"
-                                            class="text-lg ml-2 mt-1 font-semibold text-textColLight">Add
-                                            Expense</p>
-                                        <i id="closePopup"
-                                            class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
-                                    </div>
-                                    <div class="form-body p-4">
-                                        <div class="form-group flex flex-col">
-                                            <label id="popupCatelabel"
-                                                class="text-lg font-semibold text-textColLight">Category</label>
-                                            <input type="text" id="category"
-                                                class="form-input mt-2 p-2 rounded-lg"
-                                                placeholder="Enter Category">
-                                        </div>
-
-                                        <div class="form-group flex flex-col">
-                                            <label id="popupTitlelabel"
-                                                class="text-lg font-semibold text-textColLight mt-1">Title</label>
-                                            <input type="text" id="title"
-                                                class="form-input mt-2 p-2 rounded-lg"
-                                                placeholder="Enter Title">
-                                        </div>
-
+                                        class="form lg:w-1/3 bg-gray-100 shadow-md border-2 border-black rounded-lg transform transition-all duration-400 ease-out scale-90 ">
                                         <div
-                                            class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
-                                            <div class="sm:w-1/2 mb-4 sm:mb-0">
-                                                <label id="popupPricelabel"
-                                                    class="text-lg font-semibold text-textColLight mt-1">Price</label>
-                                                <input type="number" id="price"
-                                                    class="form-input mt-2 p-2 rounded-lg w-full"
-                                                    placeholder="Enter Price">
+                                            class="form-head flex justify-between items-center p-2 rounded-lg">
+                                            <p id="popupHead"
+                                                class="text-lg ml-2 mt-1 font-semibold text-textColLight">Add
+                                                Expense</p>
+                                            <i id="closePopup"
+                                                class="fa-solid fa-times cursor-pointer text-2xl text-textColLight close"></i>
+                                        </div>
+                                        <div class="form-body p-4">
+                                            <div class="form-group flex flex-col">
+                                                <label id="popupCatelabel"
+                                                    class="text-lg font-semibold text-textColLight">Category</label>
+                                                <input type="text" id="category"
+                                                    class="form-input mt-2 p-2 rounded-lg"
+                                                    placeholder="Enter Category">
                                             </div>
 
-                                            <div class="sm:w-1/2">
-                                                <label
-                                                    class="text-lg font-semibold text-textColLight">Date</label>
-                                                <input type="date" id="date"
-                                                    class="form-input mt-2 p-2 rounded-lg w-full">
+                                            <div class="form-group flex flex-col">
+                                                <label id="popupTitlelabel"
+                                                    class="text-lg font-semibold text-textColLight mt-1">Title</label>
+                                                <input type="text" id="title"
+                                                    class="form-input mt-2 p-2 rounded-lg"
+                                                    placeholder="Enter Title">
                                             </div>
-                                        </div>
 
-                                        <div class="form-group flex flex-col">
-                                            <label id="popupNotelabel"
-                                                class="text-lg font-semibold text-textColLight mt-1">Note</label>
-                                            <textarea id="note"
-                                                class="form-input mt-2 p-2 rounded-lg"
-                                                placeholder="Enter Note"></textarea>
-                                        </div>
+                                            <div
+                                                class="form-group flex flex-col sm:flex-row sm:justify-between sm:gap-4">
+                                                <div class="sm:w-1/2 mb-4 sm:mb-0">
+                                                    <label id="popupPricelabel"
+                                                        class="text-lg font-semibold text-textColLight mt-1">Price</label>
+                                                    <input type="number" id="price"
+                                                        class="form-input mt-2 p-2 rounded-lg w-full"
+                                                        placeholder="Enter Price">
+                                                </div>
 
-                                        <div
-                                            class="button-div w-full flex justify-end mt-4">
-                                            <button id="cancelPopup"
-                                                class="close bg-priRed mr-6 w-16 h-8 font-semibold rounded shadow-md border-2 border-black">Cancel</button>
-                                            <button id="submitExp"
-                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md block">Add</button>
-                                            <button id="submitOwe"
-                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
-                                            <button id="submitLend"
-                                                class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
-                                        </div>
+                                                <div class="sm:w-1/2">
+                                                    <label
+                                                        class="text-lg font-semibold text-textColLight">Date</label>
+                                                    <input type="date" id="date"
+                                                        class="form-input mt-2 p-2 rounded-lg w-full">
+                                                </div>
+                                            </div>
 
+                                            <div class="form-group flex flex-col">
+                                                <label id="popupNotelabel"
+                                                    class="text-lg font-semibold text-textColLight mt-1">Note</label>
+                                                <textarea id="note"
+                                                    class="form-input mt-2 p-2 rounded-lg"
+                                                    placeholder="Enter Note"></textarea>
+                                            </div>
+
+                                            <div
+                                                class="button-div w-full flex justify-end mt-4">
+                                                <button id="cancelPopup"
+                                                    class="close bg-priRed mr-6 w-16 h-8 font-semibold rounded shadow-md border-2 border-black">Cancel</button>
+                                                <button id="submitExp"
+                                                    class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md block">Add</button>
+                                                <button id="submitOwe"
+                                                    class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
+                                                <button id="submitLend"
+                                                    class="bg-secGreen w-16 h-8 font-semibold text-textCol rounded shadow-md hidden">Add</button>
+                                            </div>
+
+                                        </div>
                                     </div>
+
                                 </div>
 
-                            </div>
+                            </section>
 
-                        </section>
+                        </div>
+                        <script src="scripts/uiux.js"></script>
+                        <script src="scripts/app.js"></script>
 
-                    </div>
-                    <script src="scripts/uiux.js"></script>
-                    <script src="scripts/app.js"></script>
-
-                    <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
-                </body>
-            </html>
+                        <!-- npx tailwindcss -i ./styles/input.css -o ./styles/output.css --watch -->
+                    </body>
+                </html>

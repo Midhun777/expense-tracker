@@ -2,7 +2,6 @@ let isLSAvailableExp = localStorage.getItem("expenses");
 let isLSAvailableOwe = localStorage.getItem("owes");
 let isLSAvailableLend = localStorage.getItem("lends");
 
-
 const db = {
     expenseArr: [],
     owesArr: [],
@@ -125,6 +124,8 @@ submitLend.addEventListener("click", function () {
     // }
 
 });
+
+
 
 
 function loadSaveData(type, container) {
