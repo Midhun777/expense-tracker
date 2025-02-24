@@ -2,11 +2,18 @@ let isLSAvailableExp = localStorage.getItem("expenses");
 let isLSAvailableOwe = localStorage.getItem("owes");
 let isLSAvailableLend = localStorage.getItem("lends");
 
+
 const db = {
     expenseArr: [],
     owesArr: [],
     lendsArr: []
 };
+
+function rewriteObj() {
+    db.expenseArr = JSON.parse(localStorage.getItem("expenses")) || [];
+    db.owesArr = JSON.parse(localStorage.getItem("owes")) || [];
+    db.lendsArr = JSON.parse(localStorage.getItem("lends")) || [];
+}
 
 function checkAndLoadData(type, container) {
     let data = localStorage.getItem(type);
@@ -21,6 +28,7 @@ function checkAndLoadData(type, container) {
 checkAndLoadData("expenses", expCont);
 checkAndLoadData("owes", oweCont);
 checkAndLoadData("lends", lendCont);
+rewriteObj();
 
 submitExp.addEventListener("click", function () {
     console.log("clicked submit expense")
@@ -120,6 +128,7 @@ submitLend.addEventListener("click", function () {
 
 
 function loadSaveData(type, container) {
+    ;
 
     var dataLs = localStorage.getItem(type);
     const dataJson = JSON.parse(dataLs);
