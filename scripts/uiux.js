@@ -28,6 +28,9 @@ const popupTitlelabel = document.getElementById("popupTitlelabel");
 const popupPricelabel = document.getElementById("popupPricelabel");
 const popupNotelabel = document.getElementById("popupNotelabel");
 
+//Card
+
+
 expNav.addEventListener("click", function () {
     // console.log("Expense clicked");
     secTitle.innerHTML = "Expenses";
@@ -151,6 +154,21 @@ document.addEventListener("keydown", function (event) {
         hidePopup();
     }
 });
+
+function displayInDetail(cardElement) {
+    console.log("Card clicked:", cardElement);
+}
+
+document.addEventListener("click", function (e) {
+    console.log("Clicked element:", e.target);
+
+    if (e.target.classList.contains("card")) {
+        console.log("Card detected!"); 
+        displayInDetail(e.target);
+    }
+});
+
+
 
 function showPopup() {
     popupCont.classList.remove("hidden");

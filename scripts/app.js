@@ -1,7 +1,7 @@
 let isLSAvailableExp = localStorage.getItem("expenses");
 let isLSAvailableOwe = localStorage.getItem("owes");
 let isLSAvailableLend = localStorage.getItem("lends");
-
+ 
 const db = {
     expenseArr: [],
     owesArr: [],
@@ -129,16 +129,14 @@ submitLend.addEventListener("click", function () {
 
 
 function loadSaveData(type, container) {
-    ;
-
     var dataLs = localStorage.getItem(type);
     const dataJson = JSON.parse(dataLs);
     console.log(`Loaded ${type} Data From Local Storage`);
-    console.log(JSON.parse(dataLs));
+    // console.log(JSON.parse(dataLs));
 
     dataJson.forEach(item => {
         container.innerHTML += `
-        <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+        <div id="cardId" class="card exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
             <div class="card-left w-9/12">
                 <p id="expCardTitle"
                     class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${item.name}</p>
@@ -155,8 +153,8 @@ function loadSaveData(type, container) {
 }
 
 function renderCards(container, expName, expAmt, expDate, expDesc) {
-    container.innerHTML += `<div
-                        class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+    container.innerHTML += `<div id="cardId"
+                        class="card exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
                         <div class="card-left w-9/12">
                             <p id="expCardTitle"
                                 class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${expName.value}</p>
@@ -172,7 +170,7 @@ function renderCards(container, expName, expAmt, expDate, expDesc) {
 
 function generateHTMLCard() {
     container.innerHTML += `
-                    <div class="exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
+                    <div id="cardId" class="card exp-card mt-4 w-full lg:w-[32%] bg-priRed h-[4.7em] lg:h-20 border-2 border-black rounded-lg shadow-md flex mb-1">
                         <div class="card-left w-9/12">
                             <p id="expCardTitle"
                                 class="text-xl font-semibold ml-3 text-textColLight mt-2 lg:mt-2">${item.name}</p>
